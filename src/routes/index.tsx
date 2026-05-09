@@ -281,7 +281,6 @@ function Index() {
             </div>
           )}
         </div>
-        </div>
       </section>
 
       {/* Bachelor thesis */}
