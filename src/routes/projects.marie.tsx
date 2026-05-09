@@ -163,6 +163,84 @@ function MarieCase() {
         </div>
       </section>
 
+      {/* Process */}
+      <section className="border-y border-border/60 bg-gradient-soft">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Process</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">How the work came together.</h2>
+            <p className="mt-4 text-muted-foreground">
+              From first interview to final pitch — the steps the project moved through.
+            </p>
+          </div>
+
+          <ol className="mt-12 grid gap-5 md:grid-cols-2">
+            {[
+              { title: "User research", description: "Interviewed 12+ women navigating peri- and post-menopause to map the real lived experience and the gaps in current support." },
+              { title: "Problem definition", description: "Synthesised insights into one sentence: women feel dismissed and under-informed during menopause, and need a daily companion they trust." },
+              { title: "Ideation", description: "Sprinted through concepts — from clinical journals to social communities — and converged on a soft, daily check-in product." },
+              { title: "UI / UX design", description: "Designed a calm, warm interface in Figma with a strong focus on accessibility and tone of voice for a sensitive topic." },
+              { title: "Prototyping", description: "Built an interactive Figma prototype and validated the symptom check-in flow with returning interview participants." },
+              { title: "Presentation", description: "Pitched Marie to the hackathon jury with a story arc — context, insight, product, impact — and finished in the top 5." },
+            ].map((step, i) => (
+              <li
+                key={step.title}
+                className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-card transition hover:-translate-y-1 hover:shadow-soft"
+              >
+                <div className="flex items-start gap-5">
+                  <div className="font-display text-3xl text-gradient leading-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div>
+                    <h3 className="font-display text-xl">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Product features */}
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Product features</p>
+          <h2 className="font-display mt-3 text-3xl md:text-4xl">Three things it does well.</h2>
+          <p className="mt-4 text-muted-foreground">
+            Drop in screenshots or visuals for each of the product's headline features.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            { title: "Daily home", description: "A warm, low-pressure entry point with quick access to trackers and tips.", image: shot1 },
+            { title: "Symptom check-in", description: "Capture mood and symptoms in seconds — building a personal timeline.", image: shot2 },
+            { title: "Trusted content", description: "Expert-reviewed articles and a community feed for shared experience.", image: shot3 },
+          ].map((f) => (
+            <article
+              key={f.title}
+              className="group overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft"
+            >
+              <div className="aspect-[4/5] overflow-hidden bg-muted">
+                <img
+                  src={f.image}
+                  alt={f.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1280}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Reflections */}
       <section className="border-t border-border/60 bg-gradient-soft">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-5 md:py-28">
