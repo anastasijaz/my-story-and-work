@@ -6,6 +6,7 @@ import projHoreich from "@/assets/proj-horeich.jpg";
 import projNuern from "@/assets/proj-nuernberger.jpg";
 import projSport from "@/assets/proj-sportbuddy.jpg";
 import projHr from "@/assets/proj-hr.jpg";
+import projThesis from "@/assets/proj-thesis.jpg";
 import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
@@ -25,30 +26,35 @@ const projects = [
     tag: "Social · Sports",
     use: "A dating platform built around shared movement — match with people through the sports and activities you actually love.",
     img: projMelt,
+    href: "/projects/melt" as const,
   },
   {
     name: "Horeich",
     tag: "Web · Startup",
     use: "Reworked the corporate website for the startup I worked at — sharper messaging, modernised UI, faster load.",
     img: projHoreich,
+    href: "/projects/horeich" as const,
   },
   {
     name: "Legacy",
     tag: "InsurTech · Zollhof Challenge",
     use: "Built for the Nürnberger Versicherung challenge at Zollhof: an app that makes end-of-life planning approachable and dignified.",
     img: projNuern,
+    href: "/projects/legacy" as const,
   },
   {
     name: "SportBuddy",
     tag: "Community · Mobile",
     use: "Find training partners nearby for any sport — from climbing to bouldering to weekend football.",
     img: projSport,
+    href: "/projects/sportbuddy" as const,
   },
   {
     name: "HR Tool",
     tag: "Internal Product",
     use: "A lightweight recruiting workspace to source, evaluate and shortlist candidates without the SaaS overhead.",
     img: projHr,
+    href: "/projects/hr-tool" as const,
   },
 ];
 
