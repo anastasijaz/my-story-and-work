@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-gradient.jpg";
 import projMarie from "@/assets/proj-marie.jpg";
@@ -13,10 +14,14 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const filters = ["All", "Mobile", "Web", "Social", "Health", "Internal"] as const;
+type Filter = (typeof filters)[number];
+
 const projects = [
   {
     name: "Marie",
     tag: "Health · Femtech",
+    categories: ["Mobile", "Health"] as Filter[],
     use: "A companion app supporting women through the menopause journey — symptom tracking, evidence-based guidance, and community.",
     img: projMarie,
     href: "/projects/marie" as const,
@@ -24,6 +29,7 @@ const projects = [
   {
     name: "Melt",
     tag: "Social · Sports",
+    categories: ["Mobile", "Social"] as Filter[],
     use: "A dating platform built around shared movement — match with people through the sports and activities you actually love.",
     img: projMelt,
     href: "/projects/melt" as const,
@@ -31,6 +37,7 @@ const projects = [
   {
     name: "Horeich",
     tag: "Web · Startup",
+    categories: ["Web"] as Filter[],
     use: "Reworked the corporate website for the startup I worked at — sharper messaging, modernised UI, faster load.",
     img: projHoreich,
     href: "/projects/horeich" as const,
@@ -38,6 +45,7 @@ const projects = [
   {
     name: "Legacy",
     tag: "InsurTech · Zollhof Challenge",
+    categories: ["Mobile", "Health"] as Filter[],
     use: "Built for the Nürnberger Versicherung challenge at Zollhof: an app that makes end-of-life planning approachable and dignified.",
     img: projNuern,
     href: "/projects/legacy" as const,
@@ -45,6 +53,7 @@ const projects = [
   {
     name: "SportBuddy",
     tag: "Community · Mobile",
+    categories: ["Mobile", "Social"] as Filter[],
     use: "Find training partners nearby for any sport — from climbing to bouldering to weekend football.",
     img: projSport,
     href: "/projects/sportbuddy" as const,
@@ -52,6 +61,7 @@ const projects = [
   {
     name: "HR Tool",
     tag: "Internal Product",
+    categories: ["Web", "Internal"] as Filter[],
     use: "A lightweight recruiting workspace to source, evaluate and shortlist candidates without the SaaS overhead.",
     img: projHr,
     href: "/projects/hr-tool" as const,
@@ -66,6 +76,12 @@ const highlights = [
 ];
 
 function Index() {
+  const [activeFilter, setActiveFilter] = useState<Filter>("All");
+  const visibleProjects =
+    activeFilter === "All"
+      ? projects
+      : projects.filter((p) => p.categories.includes(activeFilter));
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Nav */}
