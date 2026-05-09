@@ -184,3 +184,87 @@ function Section({ section }: { section: CaseStudySection }) {
     </section>
   );
 }
+
+function ProcessSection({ process }: { process: CaseStudyProcessStep[] }) {
+  return (
+    <section className="border-y border-border/60 bg-gradient-soft">
+      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Process</p>
+          <h2 className="font-display mt-3 text-3xl md:text-4xl">How the work came together.</h2>
+          <p className="mt-4 text-muted-foreground">
+            From first interview to final pitch — the steps the project moved through.
+          </p>
+        </div>
+
+        <ol className="mt-12 grid gap-5 md:grid-cols-2">
+          {process.map((step, i) => (
+            <li
+              key={step.title}
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 shadow-card transition hover:-translate-y-1 hover:shadow-soft"
+            >
+              <div className="flex items-start gap-5">
+                <div className="font-display text-3xl text-gradient leading-none">
+                  {String(i + 1).padStart(2, "0")}
+                </div>
+                <div>
+                  <h3 className="font-display text-xl">{step.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
+}
+
+function FeaturesSection({ features }: { features: CaseStudyFeature[] }) {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+      <div className="max-w-2xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Product features</p>
+        <h2 className="font-display mt-3 text-3xl md:text-4xl">Three things it does well.</h2>
+        <p className="mt-4 text-muted-foreground">
+          Drop in screenshots or visuals for each of the product's headline features.
+        </p>
+      </div>
+
+      <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {features.map((f) => (
+          <article
+            key={f.title}
+            className="group overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft"
+          >
+            {f.image ? (
+              <div className="aspect-[4/5] overflow-hidden bg-muted">
+                <img
+                  src={f.image}
+                  alt={f.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1280}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+            ) : (
+              <div className="flex aspect-[4/5] items-center justify-center border-b border-dashed border-border bg-muted/40 p-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                Add product image
+              </div>
+            )}
+            <div className="p-6">
+              <h3 className="font-display text-xl">{f.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                {f.description}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
