@@ -237,30 +237,25 @@ function Index() {
       <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-warm p-10 text-primary-foreground shadow-glow md:p-16">
           <div className="blob right-[-10%] top-[-30%] h-80 w-80" style={{ background: "white", opacity: 0.25 }} />
-          <div className="relative max-w-2xl">
-            <h2 className="font-display text-4xl leading-tight md:text-5xl">
-              Let's build something useful together.
-            </h2>
-            <p className="mt-4 text-lg opacity-90">
-              I'm currently open to internships, thesis projects and freelance
-              collaborations in energy, sustainability and product.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+          <div className="relative grid gap-10 md:grid-cols-2 md:items-start">
+            <div>
+              <h2 className="font-display text-4xl leading-tight md:text-5xl">
+                Let's build something useful together.
+              </h2>
+              <p className="mt-4 text-lg opacity-90">
+                I'm currently open to internships, thesis projects and freelance
+                collaborations in energy, sustainability and product.
+              </p>
               <a
                 href="/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground hover:opacity-90 transition"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground hover:opacity-90 transition"
               >
                 Download resume
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
               </a>
-              <a
-                href="mailto:hello@example.com"
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-primary-foreground backdrop-blur hover:bg-white/20 transition"
-              >
-                Get in touch →
-              </a>
             </div>
+            <ContactForm />
           </div>
         </div>
       </section>
