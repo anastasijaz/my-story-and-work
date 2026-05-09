@@ -130,6 +130,10 @@ export function CaseStudyLayout(p: CaseStudyProps) {
         </div>
       </section>
 
+      <ProcessSection process={p.process ?? DEFAULT_PROCESS} />
+
+      <FeaturesSection features={p.features ?? DEFAULT_FEATURES} />
+
       {/* Reflections */}
       <section className="border-t border-border/60 bg-gradient-soft">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-5 md:py-28">
