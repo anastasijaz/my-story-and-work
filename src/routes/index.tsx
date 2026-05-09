@@ -219,8 +219,35 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {projects.map((p, i) => {
+          <div className="mt-10 flex flex-wrap gap-2" role="tablist" aria-label="Filter projects by category">
+            {filters.map((f) => {
+              const active = f === activeFilter;
+              return (
+                <button
+                  key={f}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setActiveFilter(f)}
+                  className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-wider transition ${
+                    active
+                      ? "border-transparent bg-gradient-warm text-primary-foreground shadow-glow"
+                      : "border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground/30"
+                  }`}
+                >
+                  {f}
+                </button>
+              );
+            })}
+          </div>
+
+          {visibleProjects.length === 0 ? (
+            <p className="mt-12 rounded-3xl border border-dashed border-border bg-card/60 p-10 text-center text-muted-foreground">
+              No projects in this category yet.
+            </p>
+          ) : (
+            <div className="mt-8 grid gap-6 md:grid-cols-2">
+              {visibleProjects.map((p, i) => {
               const Inner = (
                 <div className={`grid gap-0 ${i % 3 === 0 ? "md:grid-cols-2" : ""}`}>
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
