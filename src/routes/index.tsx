@@ -6,6 +6,7 @@ import projHoreich from "@/assets/proj-horeich.jpg";
 import projNuern from "@/assets/proj-nuernberger.jpg";
 import projSport from "@/assets/proj-sportbuddy.jpg";
 import projHr from "@/assets/proj-hr.jpg";
+import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
   component: Index,
