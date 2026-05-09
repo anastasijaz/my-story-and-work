@@ -10,11 +10,32 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProjectsThesisRouteImport } from './routes/projects.thesis'
+import { Route as ProjectsSportbuddyRouteImport } from './routes/projects.sportbuddy'
+import { Route as ProjectsMeltRouteImport } from './routes/projects.melt'
 import { Route as ProjectsMarieRouteImport } from './routes/projects.marie'
+import { Route as ProjectsLegacyRouteImport } from './routes/projects.legacy'
+import { Route as ProjectsHrToolRouteImport } from './routes/projects.hr-tool'
+import { Route as ProjectsHoreichRouteImport } from './routes/projects.horeich'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsThesisRoute = ProjectsThesisRouteImport.update({
+  id: '/projects/thesis',
+  path: '/projects/thesis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsSportbuddyRoute = ProjectsSportbuddyRouteImport.update({
+  id: '/projects/sportbuddy',
+  path: '/projects/sportbuddy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsMeltRoute = ProjectsMeltRouteImport.update({
+  id: '/projects/melt',
+  path: '/projects/melt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsMarieRoute = ProjectsMarieRouteImport.update({
@@ -22,31 +43,95 @@ const ProjectsMarieRoute = ProjectsMarieRouteImport.update({
   path: '/projects/marie',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsLegacyRoute = ProjectsLegacyRouteImport.update({
+  id: '/projects/legacy',
+  path: '/projects/legacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsHrToolRoute = ProjectsHrToolRouteImport.update({
+  id: '/projects/hr-tool',
+  path: '/projects/hr-tool',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsHoreichRoute = ProjectsHoreichRouteImport.update({
+  id: '/projects/horeich',
+  path: '/projects/horeich',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/projects/horeich': typeof ProjectsHoreichRoute
+  '/projects/hr-tool': typeof ProjectsHrToolRoute
+  '/projects/legacy': typeof ProjectsLegacyRoute
   '/projects/marie': typeof ProjectsMarieRoute
+  '/projects/melt': typeof ProjectsMeltRoute
+  '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
+  '/projects/thesis': typeof ProjectsThesisRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/projects/horeich': typeof ProjectsHoreichRoute
+  '/projects/hr-tool': typeof ProjectsHrToolRoute
+  '/projects/legacy': typeof ProjectsLegacyRoute
   '/projects/marie': typeof ProjectsMarieRoute
+  '/projects/melt': typeof ProjectsMeltRoute
+  '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
+  '/projects/thesis': typeof ProjectsThesisRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/projects/horeich': typeof ProjectsHoreichRoute
+  '/projects/hr-tool': typeof ProjectsHrToolRoute
+  '/projects/legacy': typeof ProjectsLegacyRoute
   '/projects/marie': typeof ProjectsMarieRoute
+  '/projects/melt': typeof ProjectsMeltRoute
+  '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
+  '/projects/thesis': typeof ProjectsThesisRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/marie'
+  fullPaths:
+    | '/'
+    | '/projects/horeich'
+    | '/projects/hr-tool'
+    | '/projects/legacy'
+    | '/projects/marie'
+    | '/projects/melt'
+    | '/projects/sportbuddy'
+    | '/projects/thesis'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/marie'
-  id: '__root__' | '/' | '/projects/marie'
+  to:
+    | '/'
+    | '/projects/horeich'
+    | '/projects/hr-tool'
+    | '/projects/legacy'
+    | '/projects/marie'
+    | '/projects/melt'
+    | '/projects/sportbuddy'
+    | '/projects/thesis'
+  id:
+    | '__root__'
+    | '/'
+    | '/projects/horeich'
+    | '/projects/hr-tool'
+    | '/projects/legacy'
+    | '/projects/marie'
+    | '/projects/melt'
+    | '/projects/sportbuddy'
+    | '/projects/thesis'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ProjectsHoreichRoute: typeof ProjectsHoreichRoute
+  ProjectsHrToolRoute: typeof ProjectsHrToolRoute
+  ProjectsLegacyRoute: typeof ProjectsLegacyRoute
   ProjectsMarieRoute: typeof ProjectsMarieRoute
+  ProjectsMeltRoute: typeof ProjectsMeltRoute
+  ProjectsSportbuddyRoute: typeof ProjectsSportbuddyRoute
+  ProjectsThesisRoute: typeof ProjectsThesisRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -58,6 +143,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/thesis': {
+      id: '/projects/thesis'
+      path: '/projects/thesis'
+      fullPath: '/projects/thesis'
+      preLoaderRoute: typeof ProjectsThesisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/sportbuddy': {
+      id: '/projects/sportbuddy'
+      path: '/projects/sportbuddy'
+      fullPath: '/projects/sportbuddy'
+      preLoaderRoute: typeof ProjectsSportbuddyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/melt': {
+      id: '/projects/melt'
+      path: '/projects/melt'
+      fullPath: '/projects/melt'
+      preLoaderRoute: typeof ProjectsMeltRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/marie': {
       id: '/projects/marie'
       path: '/projects/marie'
@@ -65,13 +171,50 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsMarieRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/legacy': {
+      id: '/projects/legacy'
+      path: '/projects/legacy'
+      fullPath: '/projects/legacy'
+      preLoaderRoute: typeof ProjectsLegacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/hr-tool': {
+      id: '/projects/hr-tool'
+      path: '/projects/hr-tool'
+      fullPath: '/projects/hr-tool'
+      preLoaderRoute: typeof ProjectsHrToolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/horeich': {
+      id: '/projects/horeich'
+      path: '/projects/horeich'
+      fullPath: '/projects/horeich'
+      preLoaderRoute: typeof ProjectsHoreichRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ProjectsHoreichRoute: ProjectsHoreichRoute,
+  ProjectsHrToolRoute: ProjectsHrToolRoute,
+  ProjectsLegacyRoute: ProjectsLegacyRoute,
   ProjectsMarieRoute: ProjectsMarieRoute,
+  ProjectsMeltRoute: ProjectsMeltRoute,
+  ProjectsSportbuddyRoute: ProjectsSportbuddyRoute,
+  ProjectsThesisRoute: ProjectsThesisRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
