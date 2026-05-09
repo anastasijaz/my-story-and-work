@@ -78,6 +78,7 @@ function Index() {
             <a href="#about" className="hover:text-foreground transition">About</a>
             <a href="#highlights" className="hover:text-foreground transition">Highlights</a>
             <a href="#work" className="hover:text-foreground transition">Work</a>
+            <a href="#thesis" className="hover:text-foreground transition">Thesis</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </div>
           <a
