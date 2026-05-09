@@ -6,6 +6,7 @@ import projHoreich from "@/assets/proj-horeich.jpg";
 import projNuern from "@/assets/proj-nuernberger.jpg";
 import projSport from "@/assets/proj-sportbuddy.jpg";
 import projHr from "@/assets/proj-hr.jpg";
+import projThesis from "@/assets/proj-thesis.jpg";
 import { ContactForm } from "@/components/ContactForm";
 
 export const Route = createFileRoute("/")({
@@ -25,30 +26,35 @@ const projects = [
     tag: "Social · Sports",
     use: "A dating platform built around shared movement — match with people through the sports and activities you actually love.",
     img: projMelt,
+    href: "/projects/melt" as const,
   },
   {
     name: "Horeich",
     tag: "Web · Startup",
     use: "Reworked the corporate website for the startup I worked at — sharper messaging, modernised UI, faster load.",
     img: projHoreich,
+    href: "/projects/horeich" as const,
   },
   {
     name: "Legacy",
     tag: "InsurTech · Zollhof Challenge",
     use: "Built for the Nürnberger Versicherung challenge at Zollhof: an app that makes end-of-life planning approachable and dignified.",
     img: projNuern,
+    href: "/projects/legacy" as const,
   },
   {
     name: "SportBuddy",
     tag: "Community · Mobile",
     use: "Find training partners nearby for any sport — from climbing to bouldering to weekend football.",
     img: projSport,
+    href: "/projects/sportbuddy" as const,
   },
   {
     name: "HR Tool",
     tag: "Internal Product",
     use: "A lightweight recruiting workspace to source, evaluate and shortlist candidates without the SaaS overhead.",
     img: projHr,
+    href: "/projects/hr-tool" as const,
   },
 ];
 
@@ -72,6 +78,7 @@ function Index() {
             <a href="#about" className="hover:text-foreground transition">About</a>
             <a href="#highlights" className="hover:text-foreground transition">Highlights</a>
             <a href="#work" className="hover:text-foreground transition">Work</a>
+            <a href="#thesis" className="hover:text-foreground transition">Thesis</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </div>
           <a
@@ -217,21 +224,68 @@ function Index() {
                       <p className="mt-3 text-muted-foreground">{p.use}</p>
                     </div>
                     <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground/70">
-                      {"href" in p ? "Read case study" : "Case study"}
+                      Read case study
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-x-1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </div>
                   </div>
                 </div>
               );
               const className = `group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:shadow-soft hover:-translate-y-1 ${i % 3 === 0 ? "md:col-span-2" : ""}`;
-              return "href" in p && p.href ? (
+              return (
                 <Link key={p.name} to={p.href} className={className}>{Inner}</Link>
-              ) : (
-                <article key={p.name} className={className}>{Inner}</article>
               );
             })}
           </div>
         </div>
+      </section>
+
+      {/* Bachelor thesis */}
+      <section id="thesis" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Bachelor thesis</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">Where my engineering side lives.</h2>
+          </div>
+          <Link to="/projects/thesis" className="hidden text-sm font-medium text-muted-foreground hover:text-foreground md:inline">
+            Read the case study →
+          </Link>
+        </div>
+
+        <Link
+          to="/projects/thesis"
+          className="group mt-10 grid gap-0 overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft md:grid-cols-2"
+        >
+          <div className="relative aspect-[4/3] overflow-hidden bg-muted md:aspect-auto">
+            <img
+              src={projThesis}
+              alt="Bachelor thesis — PowerFactory to RSCAD conversion tool"
+              loading="lazy"
+              width={1024}
+              height={1024}
+              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+            />
+          </div>
+          <div className="flex flex-col justify-between p-7 md:p-10">
+            <div>
+              <span className="text-xs font-medium uppercase tracking-wider text-primary">Energy systems · Real-time simulation</span>
+              <h3 className="font-display mt-3 text-2xl md:text-3xl">PowerFactory → RSCAD conversion tool</h3>
+              <p className="mt-4 text-muted-foreground">
+                An automated pipeline that translates DIgSILENT PowerFactory grid models
+                into RSCAD draft files for real-time digital simulation on RTDS hardware —
+                turning hours of manual rebuilding into minutes.
+              </p>
+              <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
+                <li>· Python tooling on top of the PowerFactory API</li>
+                <li>· Tool-agnostic intermediate model</li>
+                <li>· Validated against benchmark networks (&lt;1% load-flow deviation)</li>
+              </ul>
+            </div>
+            <div className="mt-8 flex items-center gap-2 text-sm font-medium text-foreground/70">
+              Read the full case study
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-x-1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </Link>
       </section>
 
       {/* CTA / Contact */}
