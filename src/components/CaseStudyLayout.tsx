@@ -9,6 +9,8 @@ export type CaseStudySection = {
 
 export type CaseStudyOutcome = { k: string; v: string; d: string };
 export type CaseStudyMeta = { l: string; v: string };
+export type CaseStudyProcessStep = { title: string; description: string };
+export type CaseStudyFeature = { title: string; description: string; image?: string };
 
 export type CaseStudyProps = {
   eyebrow: string;
@@ -22,7 +24,25 @@ export type CaseStudyProps = {
   approach: CaseStudySection;
   outcomes: CaseStudyOutcome[];
   reflections: CaseStudySection;
+  process?: CaseStudyProcessStep[];
+  features?: [CaseStudyFeature, CaseStudyFeature, CaseStudyFeature];
 };
+
+const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
+  { title: "User research", description: "Interviews, desk research and competitive scans to understand the people the product is built for and what they actually struggle with." },
+  { title: "Problem definition", description: "Synthesised insights into a sharp problem statement and a concrete \"How might we…\" framing for the team to align on." },
+  { title: "Ideation", description: "Diverged with quick sketches and concept sprints, then converged on the strongest direction using impact-vs-effort scoring." },
+  { title: "UI / UX design", description: "Translated the chosen direction into wireframes, then a polished UI in Figma — components, states, and a clear user flow." },
+  { title: "Prototyping", description: "Built an interactive prototype to test the core flow with real users and pressure-test edge cases before any production code was written." },
+  { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders, jury or the wider team." },
+];
+
+const DEFAULT_FEATURES: [CaseStudyFeature, CaseStudyFeature, CaseStudyFeature] = [
+  { title: "Feature one", description: "Replace this card with a screenshot and short description of the first key feature." },
+  { title: "Feature two", description: "Replace this card with a screenshot and short description of the second key feature." },
+  { title: "Feature three", description: "Replace this card with a screenshot and short description of the third key feature." },
+];
+
 
 export function CaseStudyLayout(p: CaseStudyProps) {
   return (
