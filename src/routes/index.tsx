@@ -95,6 +95,7 @@ function Index() {
             <a href="#highlights" className="hover:text-foreground transition">Highlights</a>
             <a href="#work" className="hover:text-foreground transition">Work</a>
             <a href="#thesis" className="hover:text-foreground transition">Thesis</a>
+            <a href="#about" className="hover:text-foreground transition">About</a>
             <a href="#contact" className="hover:text-foreground transition">Contact</a>
           </div>
           <a
@@ -332,7 +333,56 @@ function Index() {
         </Link>
       </section>
 
-      {/* CTA / Contact */}
+      {/* About me */}
+      <section id="about" className="border-y border-border/60 bg-gradient-soft">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+          <div className="grid gap-12 md:grid-cols-5 md:items-center">
+            <div className="md:col-span-2">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-muted shadow-card">
+                <div className="flex h-full w-full items-center justify-center p-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                  Add a picture of you
+                </div>
+              </div>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["German", "English", "Serbian"].map((lang) => (
+                  <span
+                    key={lang}
+                    className="cursor-default rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/80 shadow-card"
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="md:col-span-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">About me</p>
+              <h2 className="font-display mt-3 text-3xl md:text-4xl">A short story behind the work.</h2>
+              <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                <p>
+                  I'm a designer and engineer-in-the-making with a background that bridges
+                  energy systems and digital product design. My academic path started with a
+                  B.Sc. in Industrial Engineering, specialising in energy systems — culminating
+                  in a bachelor thesis on automating the conversion of PowerFactory grid models
+                  into RSCAD for real-time simulation.
+                </p>
+                <p>
+                  Alongside the technical side, I've spent the last few years designing mobile
+                  and web products — from health and dating apps to internal tools and startup
+                  websites — focusing on clear user research, sharp problem framing and
+                  polished UI in Figma.
+                </p>
+                <p>
+                  I care about work that's both rigorous and human: built on solid engineering
+                  fundamentals, but shaped by listening closely to the people who'll actually use it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-warm p-10 text-primary-foreground shadow-glow md:p-16">
           <div className="blob right-[-10%] top-[-30%] h-80 w-80" style={{ background: "white", opacity: 0.25 }} />
