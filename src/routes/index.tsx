@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-gradient.jpg";
 import projMarie from "@/assets/proj-marie.jpg";
 import projMelt from "@/assets/proj-melt.jpg";
@@ -17,6 +17,7 @@ const projects = [
     tag: "Health · Femtech",
     use: "A companion app supporting women through the menopause journey — symptom tracking, evidence-based guidance, and community.",
     img: projMarie,
+    href: "/projects/marie" as const,
   },
   {
     name: "Melt",
@@ -195,11 +196,8 @@ function Index() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {projects.map((p, i) => (
-              <article
-                key={p.name}
-                className={`group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:shadow-soft hover:-translate-y-1 ${i % 3 === 0 ? "md:col-span-2" : ""}`}
-              >
+            {projects.map((p, i) => {
+              const Inner = (
                 <div className={`grid gap-0 ${i % 3 === 0 ? "md:grid-cols-2" : ""}`}>
                   <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                     <img
@@ -218,13 +216,19 @@ function Index() {
                       <p className="mt-3 text-muted-foreground">{p.use}</p>
                     </div>
                     <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground/70">
-                      Case study
+                      {"href" in p ? "Read case study" : "Case study"}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-x-1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </div>
                   </div>
                 </div>
-              </article>
-            ))}
+              );
+              const className = `group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:shadow-soft hover:-translate-y-1 ${i % 3 === 0 ? "md:col-span-2" : ""}`;
+              return "href" in p && p.href ? (
+                <Link key={p.name} to={p.href} className={className}>{Inner}</Link>
+              ) : (
+                <article key={p.name} className={className}>{Inner}</article>
+              );
+            })}
           </div>
         </div>
       </section>
