@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBg from "@/assets/hero-gradient.jpg";
 import projMarie from "@/assets/proj-marie.jpg";
 import projMelt from "@/assets/proj-melt.jpg";
@@ -17,6 +17,7 @@ const projects = [
     tag: "Health · Femtech",
     use: "A companion app supporting women through the menopause journey — symptom tracking, evidence-based guidance, and community.",
     img: projMarie,
+    href: "/projects/marie" as const,
   },
   {
     name: "Melt",
