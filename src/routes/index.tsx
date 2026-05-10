@@ -174,7 +174,8 @@ function Index() {
               Outside the lecture hall I ship products: dating apps, healthtech,
               insurance challenges, internal tools. I love taking a fuzzy brief
               from a hackathon kickoff and ending the weekend with something
-              users can actually open.
+              users can actually open. I am especially passionate about putting
+              the user at the forefront and working on solutions they will love.
             </p>
           </div>
         </div>
