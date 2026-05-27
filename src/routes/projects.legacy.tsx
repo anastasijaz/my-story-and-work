@@ -22,8 +22,8 @@ export const Route = createFileRoute("/projects/legacy")({
       stack={["React", "TypeScript", "Tailwind", "Supabase", "Figma"]}
       meta={[
         { l: "Role", v: "Product & UX" },
-        { l: "Team", v: "5 — challenge sprint" },
-        { l: "Timeline", v: "Zollhof challenge week" },
+        { l: "Team", v: "2 " },
+        { l: "Timeline", v: "Zollhof Talent Programm (3 Months)" },
         { l: "Status", v: "Pitched to Nürnberger" },
       ]}
       problem={{
