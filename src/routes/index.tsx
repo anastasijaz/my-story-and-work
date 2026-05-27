@@ -132,7 +132,7 @@ function Index() {
               people and products.
             </h1>
             <p className="mt-7 max-w-xl text-lg text-muted-foreground md:text-xl">
-              I'm an electrical engineering student specialising in energy systems.
+              I'm an industrial engineering student specialising in energy systems with a bachelors in electrical engineering.
               Between coursework, I build products at hackathons, with startups and
               for incubator challenges — turning messy problems into shipped software.
             </p>
