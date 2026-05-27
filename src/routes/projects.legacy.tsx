@@ -47,9 +47,9 @@ export const Route = createFileRoute("/projects/legacy")({
         ),
       }}
       outcomes={[
-        { k: "1", v: "Working prototype", d: "Onboarding + 3 modules" },
+        { k: "1", v: "Figma prototype", d: "Onboarding + 3 main features" },
         { k: "5min", v: "Avg. session length", d: "Designed for low pressure" },
-        { k: "★", v: "Jury favourite", d: "Selected for follow-up talks" },
+        { k: "★", v: "Currently in development", d: "Selected for follow-up talks" },
         { k: "1", v: "Insurer partner", d: "Nürnberger Versicherung" },
       ]}
       features={[
