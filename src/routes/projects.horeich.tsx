@@ -19,7 +19,7 @@ export const Route = createFileRoute("/projects/horeich")({
       intro="A ground-up rebuild of the company website: clearer story, modern UI system, measurable performance gains."
       cover={cover}
       coverAlt="Horeich — abstract cover"
-      stack={["Next.js", "TypeScript", "Tailwind", "Sanity CMS", "Vercel"]}
+      stack={["WordPress"]}
       meta={[
         { l: "Role", v: "Web lead — design + dev" },
         { l: "Team", v: "Solo with founder reviews" },
