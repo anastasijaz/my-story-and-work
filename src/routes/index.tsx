@@ -132,7 +132,7 @@ function Index() {
               people and products.
             </h1>
             <p className="mt-7 max-w-xl text-lg text-muted-foreground md:text-xl">
-              I'm an industrial engineering student specialising in energy systems.
+              I'm an electrical engineering student specialising in energy systems.
               Between coursework, I build products at hackathons, with startups and
               for incubator challenges — turning messy problems into shipped software.
             </p>
@@ -165,7 +165,7 @@ function Index() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
             <p>
-              My academic home is industrial engineering — the discipline of
+              My academic home is electrical engineering — the discipline of
               optimising how systems, people and resources work together. My
               specialisation in energy systems lets me put that lens on the most
               consequential transition of our generation.
@@ -361,9 +361,8 @@ function Index() {
               <h2 className="font-display mt-3 text-3xl md:text-4xl">A short story behind the work.</h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 <p>
-                  I'm a designer and engineer-in-the-making with a background that bridges
-                  energy systems and digital product design. My academic path started with a
-                  B.Sc. in Industrial Engineering, specialising in energy systems — culminating
+                  I'm a designer and engineer-in-the-making. My academic path started with a
+                  B.Sc. in Electrical Engineering, specialising in energy systems — culminating
                   in a bachelor thesis on automating the conversion of PowerFactory grid models
                   into RSCAD for real-time simulation.
                 </p>
@@ -413,7 +412,7 @@ function Index() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground md:flex-row">
           <p>© {new Date().getFullYear()} — Portfolio. Built with care.</p>
-          <p>Industrial Engineering · Energy Systems</p>
+          <p>Electrical Engineering · Energy Systems</p>
         </div>
       </footer>
     </div>
