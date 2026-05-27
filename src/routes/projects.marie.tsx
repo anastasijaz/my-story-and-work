@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import projMarie from "@/assets/proj-marie.jpg";
-import shot1 from "@/assets/marie-screen-1.jpg";
-import shot2 from "@/assets/marie-screen-2.jpg";
-import shot3 from "@/assets/marie-screen-3.jpg";
+import shotHome from "@/assets/marie-screen-home.jpg";
+import shotAI from "@/assets/marie-screen-ai.jpg";
+import shotTracker from "@/assets/marie-screen-tracker.jpg";
+import shotFitness from "@/assets/marie-screen-fitness.jpg";
 
 export const Route = createFileRoute("/projects/marie")({
   head: () => ({
@@ -126,9 +127,10 @@ function MarieCase() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { src: shot1, t: "Daily home", d: "A warm, low-pressure entry point with quick access to trackers and tips." },
-              { src: shot2, t: "Symptom check-in", d: "Capture mood and symptoms in seconds — building a personal timeline." },
-              { src: shot3, t: "Trusted content", d: "Expert-reviewed articles and a community feed for shared experience." },
+              { src: shotHome, t: "Daily home", d: "A warm, low-pressure entry point with quick stats and gentle daily nudges." },
+              { src: shotAI, t: "AI companion", d: "A voice-first conversational companion that logs how you're feeling in plain words." },
+              { src: shotTracker, t: "Symptom tracking", d: "Hot flashes, sleep, activity and medication — captured on one calm timeline." },
+              { src: shotFitness, t: "Personalized fitness", d: "Training plans tuned to your energy, time, and discomfort that day." },
             ].map((s) => (
               <figure key={s.t} className="overflow-hidden rounded-3xl border border-border bg-card shadow-card">
                 <div className="aspect-[2/3] overflow-hidden bg-muted">
