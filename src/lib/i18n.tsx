@@ -232,7 +232,6 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
   const options: { code: Lang; label: string }[] = [
     { code: "de", label: "DE" },
     { code: "en", label: "EN" },
-    { code: "sr", label: "SR" },
   ];
   return (
     <div
