@@ -10,6 +10,7 @@ import projHr from "@/assets/proj-hr.jpg";
 import projThesis from "@/assets/proj-thesis.jpg";
 import { ContactForm } from "@/components/ContactForm";
 import aboutPortrait from "@/assets/about-portrait.jpg";
+import { LanguageToggle, useLanguage } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -69,14 +70,15 @@ const projects = [
   },
 ];
 
-const highlights = [
-  { k: "5", v: "Hackathons", d: "Including Junction Helsinki" },
-  { k: "Slush", v: "Volunteer", d: "On the ground in Helsinki" },
-  { k: "Tech", v: "Incubator Talent", d: "Selected programme participant" },
-  { k: "Energy", v: "Specialisation", d: "Industrial engineering focus" },
+const highlightKeys = [
+  { k: "5", vKey: "highlights.hackathons.v", dKey: "highlights.hackathons.d" },
+  { k: "Slush", vKey: "highlights.slush.v", dKey: "highlights.slush.d" },
+  { k: "Tech", vKey: "highlights.tech.v", dKey: "highlights.tech.d" },
+  { k: "Energy", vKey: "highlights.energy.v", dKey: "highlights.energy.d" },
 ];
 
 function Index() {
+  const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
   const visibleProjects =
     activeFilter === "All"
@@ -92,21 +94,23 @@ function Index() {
             Portfolio<span className="text-gradient">.</span>
           </a>
           <div className="hidden gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#about" className="hover:text-foreground transition">About</a>
-            <a href="#highlights" className="hover:text-foreground transition">Highlights</a>
-            <a href="#work" className="hover:text-foreground transition">Work</a>
-            <a href="#thesis" className="hover:text-foreground transition">Thesis</a>
-            <a href="#about" className="hover:text-foreground transition">About</a>
-            <a href="#contact" className="hover:text-foreground transition">Contact</a>
+            <a href="#about" className="hover:text-foreground transition">{t("nav.about")}</a>
+            <a href="#highlights" className="hover:text-foreground transition">{t("nav.highlights")}</a>
+            <a href="#work" className="hover:text-foreground transition">{t("nav.work")}</a>
+            <a href="#thesis" className="hover:text-foreground transition">{t("nav.thesis")}</a>
+            <a href="#contact" className="hover:text-foreground transition">{t("nav.contact")}</a>
           </div>
-          <a
-            href="/resume.pdf"
-            download
-            className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background hover:opacity-90 transition"
-          >
-            Resume
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-          </a>
+          <div className="flex items-center gap-3">
+            <LanguageToggle />
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background hover:opacity-90 transition"
+            >
+              {t("nav.resume")}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            </a>
+          </div>
         </nav>
       </header>
 
@@ -123,19 +127,17 @@ function Index() {
           <div className="max-w-3xl animate-fade-up">
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-              Available for freelance projects & product management jobs
+              {t("hero.badge")}
             </span>
             <h1 className="font-display mt-6 text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl">
-              Engineering systems
+              {t("hero.title.l1")}
               <br />
-              that <span className="text-gradient italic">make sense</span> of energy,
+              {t("hero.title.l2a")}<span className="text-gradient italic">{t("hero.title.l2b")}</span>{t("hero.title.l2c")}
               <br />
-              people and products.
+              {t("hero.title.l3")}
             </h1>
             <p className="mt-7 max-w-xl text-lg text-muted-foreground md:text-xl">
-              I'm an industrial engineering student specialising in energy systems with a bachelors in electrical engineering.
-              Between coursework, I build products at hackathons, with startups and
-              for incubator challenges — turning messy problems into shipped software.
+              {t("hero.subtitle")}
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <a
@@ -143,14 +145,14 @@ function Index() {
                 download
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-warm px-6 py-3 text-sm font-semibold text-primary-foreground shadow-glow transition hover:scale-[1.02]"
               >
-                Download resume
+                {t("hero.download")}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-y-0.5"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
               </a>
               <a
                 href="#work"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground hover:bg-secondary transition"
               >
-                See selected work →
+                {t("hero.seeWork")}
               </a>
             </div>
           </div>
@@ -168,23 +170,12 @@ function Index() {
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">About</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">A builder with an engineer's mindset.</h2>
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("about.kicker")}</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("about.title")}</h2>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
-            <p>
-              My academic home is electrical engineering — the discipline of
-              optimising how systems, people and resources work together. My
-              specialisation in energy systems lets me put that lens on the most
-              consequential transition of our generation.
-            </p>
-            <p>
-              Outside the lecture hall I ship products: dating apps, healthtech,
-              insurance challenges, internal tools. I love taking a fuzzy brief
-              from a hackathon kickoff and ending the weekend with something
-              users can actually open. I am especially passionate about putting
-              the user at the forefront and working on solutions they will love.
-            </p>
+            <p>{t("about.p1")}</p>
+            <p>{t("about.p2")}</p>
           </div>
         </div>
       </section>
@@ -193,22 +184,22 @@ function Index() {
       <section id="highlights" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Resume highlights</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">Selected experiences.</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("highlights.kicker")}</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("highlights.title")}</h2>
           </div>
           <a href="/resume.pdf" download className="hidden text-sm font-medium text-muted-foreground hover:text-foreground md:inline">
-            Full resume ↓
+            {t("highlights.full")}
           </a>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {highlights.map((h) => (
+          {highlightKeys.map((h) => (
             <div
-              key={h.v}
+              key={h.vKey}
               className="group relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-card transition hover:shadow-soft hover:-translate-y-1"
             >
               <div className="font-display text-5xl text-gradient">{h.k}</div>
-              <div className="mt-3 text-base font-semibold text-foreground">{h.v}</div>
-              <div className="mt-1 text-sm text-muted-foreground">{h.d}</div>
+              <div className="mt-3 text-base font-semibold text-foreground">{t(h.vKey)}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{t(h.dKey)}</div>
               <div className="absolute -right-8 -bottom-8 h-24 w-24 rounded-full bg-gradient-warm opacity-0 blur-2xl transition group-hover:opacity-30" />
             </div>
           ))}
@@ -219,13 +210,12 @@ function Index() {
       <section id="work" className="border-t border-border/60 bg-gradient-soft">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Selected work</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("work.kicker")}</p>
             <h2 className="font-display mt-3 text-3xl md:text-4xl">
-              Six products, six different problems.
+              {t("work.title")}
             </h2>
             <p className="mt-4 text-muted-foreground">
-              From femtech to insurance, each project started with a real user need
-              and a tight deadline.
+              {t("work.subtitle")}
             </p>
           </div>
 
@@ -245,7 +235,7 @@ function Index() {
                       : "border-border bg-card text-muted-foreground hover:text-foreground hover:border-foreground/30"
                   }`}
                 >
-                  {f}
+                  {t(`filter.${f}`)}
                 </button>
               );
             })}
@@ -253,7 +243,7 @@ function Index() {
 
           {visibleProjects.length === 0 ? (
             <p className="mt-12 rounded-3xl border border-dashed border-border bg-card/60 p-10 text-center text-muted-foreground">
-              No projects in this category yet.
+              {t("work.empty")}
             </p>
           ) : (
             <div className="mt-8 grid gap-6 md:grid-cols-2">
@@ -277,7 +267,7 @@ function Index() {
                       <p className="mt-3 text-muted-foreground">{p.use}</p>
                     </div>
                     <div className="mt-6 flex items-center gap-2 text-sm font-medium text-foreground/70">
-                      Read case study
+                      {t("work.readCase")}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-x-1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </div>
                   </div>
@@ -297,11 +287,11 @@ function Index() {
       <section id="thesis" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Bachelor thesis</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">Where my engineering side lives.</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("thesis.kicker")}</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("thesis.title")}</h2>
           </div>
           <Link to="/projects/thesis" className="hidden text-sm font-medium text-muted-foreground hover:text-foreground md:inline">
-            Read the case study →
+            {t("thesis.linkShort")}
           </Link>
         </div>
 
@@ -321,21 +311,19 @@ function Index() {
           </div>
           <div className="flex flex-col justify-between p-7 md:p-10">
             <div>
-              <span className="text-xs font-medium uppercase tracking-wider text-primary">Energy systems · Real-time simulation</span>
-              <h3 className="font-display mt-3 text-2xl md:text-3xl">PowerFactory → RSCAD conversion tool</h3>
+              <span className="text-xs font-medium uppercase tracking-wider text-primary">{t("thesis.tag")}</span>
+              <h3 className="font-display mt-3 text-2xl md:text-3xl">{t("thesis.heading")}</h3>
               <p className="mt-4 text-muted-foreground">
-                An automated pipeline that translates DIgSILENT PowerFactory grid models
-                into RSCAD draft files for real-time digital simulation on RTDS hardware —
-                turning hours of manual rebuilding into minutes.
+                {t("thesis.desc")}
               </p>
               <ul className="mt-6 space-y-2 text-sm text-muted-foreground">
-                <li>· Python tooling on top of the PowerFactory API</li>
-                <li>· Tool-agnostic intermediate model</li>
-                <li>· Validated against benchmark networks (&lt;1% load-flow deviation)</li>
+                <li>{t("thesis.b1")}</li>
+                <li>{t("thesis.b2")}</li>
+                <li>{t("thesis.b3")}</li>
               </ul>
             </div>
             <div className="mt-8 flex items-center gap-2 text-sm font-medium text-foreground/70">
-              Read the full case study
+              {t("thesis.readFull")}
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="transition group-hover:translate-x-1"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </div>
           </div>
@@ -343,47 +331,34 @@ function Index() {
       </section>
 
       {/* About me */}
-      <section id="about" className="border-y border-border/60 bg-gradient-soft">
+      <section id="aboutme" className="border-y border-border/60 bg-gradient-soft">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
           <div className="grid gap-12 md:grid-cols-5 md:items-center">
             <div className="md:col-span-2">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-muted shadow-card">
                 <div className="flex h-full w-full items-center justify-center p-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  Add a picture of you
+                  {t("aboutMe.picPlaceholder")}
                 </div>
               </div>
               <div className="mt-6 flex flex-wrap gap-2">
-                {["German", "English", "Serbian"].map((lang) => (
+                {(["lang.German", "lang.English", "lang.Serbian"] as const).map((lang) => (
                   <span
                     key={lang}
                     className="cursor-default rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/80 shadow-card"
                   >
-                    {lang}
+                    {t(lang)}
                   </span>
                 ))}
               </div>
             </div>
 
             <div className="md:col-span-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">About me</p>
-              <h2 className="font-display mt-3 text-3xl md:text-4xl">A short story behind the work.</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("aboutMe.kicker")}</p>
+              <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("aboutMe.title")}</h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                <p>
-                  I'm a designer and engineer-in-the-making. My academic path started with a
-                  B.Sc. in Electrical Engineering, specialising in energy systems — culminating
-                  in a bachelor thesis on automating the conversion of PowerFactory grid models
-                  into RSCAD for real-time simulation.
-                </p>
-                <p>
-                  Alongside the technical side, I've spent the last few years designing mobile
-                  and web products — from health and dating apps to internal tools and startup
-                  websites — focusing on clear user research, sharp problem framing and
-                  polished UI in Figma.
-                </p>
-                <p>
-                  I care about work that's both rigorous and human: built on solid engineering
-                  fundamentals, but shaped by listening closely to the people who'll actually use it.
-                </p>
+                <p>{t("aboutMe.p1")}</p>
+                <p>{t("aboutMe.p2")}</p>
+                <p>{t("aboutMe.p3")}</p>
               </div>
             </div>
           </div>
@@ -397,18 +372,17 @@ function Index() {
           <div className="relative grid gap-10 md:grid-cols-2 md:items-start">
             <div>
               <h2 className="font-display text-4xl leading-tight md:text-5xl">
-                Let's build something useful together.
+                {t("contact.title")}
               </h2>
               <p className="mt-4 text-lg opacity-90">
-                I'm currently open to internships, thesis projects and freelance
-                collaborations in energy, sustainability and product.
+                {t("contact.subtitle")}
               </p>
               <a
                 href="/resume.pdf"
                 download
                 className="mt-8 inline-flex items-center gap-2 rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground hover:opacity-90 transition"
               >
-                Download resume
+                {t("hero.download")}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
               </a>
             </div>
@@ -419,8 +393,8 @@ function Index() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground md:flex-row">
-          <p>© {new Date().getFullYear()} — Portfolio. Built with care.</p>
-          <p>Electrical Engineering · Energy Systems</p>
+          <p>{t("footer.copy", { year: new Date().getFullYear() })}</p>
+          <p>{t("footer.tagline")}</p>
         </div>
       </footer>
     </div>
