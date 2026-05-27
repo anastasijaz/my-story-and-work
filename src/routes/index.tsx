@@ -361,9 +361,8 @@ function Index() {
               <h2 className="font-display mt-3 text-3xl md:text-4xl">A short story behind the work.</h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 <p>
-                  I'm a designer and engineer-in-the-making with a background that bridges
-                  energy systems and digital product design. My academic path started with a
-                  B.Sc. in Industrial Engineering, specialising in energy systems — culminating
+                  I'm a designer and engineer-in-the-making. My academic path started with a
+                  B.Sc. in Electrical Engineering, specialising in energy systems — culminating
                   in a bachelor thesis on automating the conversion of PowerFactory grid models
                   into RSCAD for real-time simulation.
                 </p>
