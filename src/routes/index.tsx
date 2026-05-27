@@ -163,15 +163,15 @@ function Index() {
       <section id="about" className="border-y border-border/60 bg-gradient-soft">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-5 md:py-28">
           <div className="md:col-span-2">
-            <div className="relative overflow-hidden rounded-3xl border border-border shadow-card">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("about.kicker")}</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("about.title")}</h2>
+            <div className="relative mt-6 overflow-hidden rounded-3xl border border-border shadow-card">
               <img
                 src={aboutPortrait}
                 alt="Portrait"
                 className="aspect-[4/5] w-full object-cover"
               />
             </div>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("about.kicker")}</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("about.title")}</h2>
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
             <p>{t("about.p1")}</p>
