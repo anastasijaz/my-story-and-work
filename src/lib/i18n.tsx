@@ -79,7 +79,7 @@ const translations: Record<Lang, Dict> = {
     "aboutMe.picPlaceholder": "Add a picture of you",
     "lang.German": "German",
     "lang.English": "English",
-    "lang.Serbian": "Serbian",
+
 
     "contact.title": "Let's build something useful together.",
     "contact.subtitle":
