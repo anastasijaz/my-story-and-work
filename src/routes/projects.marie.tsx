@@ -66,8 +66,24 @@ function MarieCase() {
               </div>
             </div>
 
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl shadow-glow">
-              <img src={projMarie} alt="Marie — abstract cover" width={1024} height={1024} className="h-full w-full object-cover" />
+            <div className="relative mx-auto w-full max-w-[320px]">
+              {/* iPhone frame */}
+              <div className="relative rounded-[3rem] bg-slate-900 p-2 shadow-2xl ring-1 ring-white/10">
+                {/* Dynamic Island */}
+                <div className="absolute left-1/2 top-3 z-10 h-6 w-20 -translate-x-1/2 rounded-full bg-black" />
+                {/* Screen */}
+                <div className="relative overflow-hidden rounded-[2.4rem] bg-black">
+                  <img
+                    src={shotHome}
+                    alt="Marie app home screen"
+                    width={1024}
+                    height={1536}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+              {/* Reflection / shadow */}
+              <div className="pointer-events-none absolute inset-x-4 -bottom-4 h-8 rounded-full bg-black/20 blur-xl" />
             </div>
           </div>
         </div>
