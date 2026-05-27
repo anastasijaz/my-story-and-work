@@ -10,7 +10,7 @@ export type CaseStudySection = {
 export type CaseStudyOutcome = { k: string; v: string; d: string };
 export type CaseStudyMeta = { l: string; v: string };
 export type CaseStudyProcessStep = { title: string; description: string };
-export type CaseStudyFeature = { title: string; description: string; image?: string };
+export type CaseStudyFeature = { title: string; description: string; image?: string; video?: string };
 
 export type CaseStudyProps = {
   eyebrow: string;
@@ -25,7 +25,7 @@ export type CaseStudyProps = {
   outcomes: CaseStudyOutcome[];
   reflections: CaseStudySection;
   process?: CaseStudyProcessStep[];
-  features?: [CaseStudyFeature, CaseStudyFeature, CaseStudyFeature];
+  features?: CaseStudyFeature[];
 };
 
 const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
@@ -37,7 +37,7 @@ const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
   { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders, jury or the wider team." },
 ];
 
-const DEFAULT_FEATURES: [CaseStudyFeature, CaseStudyFeature, CaseStudyFeature] = [
+const DEFAULT_FEATURES: CaseStudyFeature[] = [
   { title: "Feature one", description: "Replace this card with a screenshot and short description of the first key feature." },
   { title: "Feature two", description: "Replace this card with a screenshot and short description of the second key feature." },
   { title: "Feature three", description: "Replace this card with a screenshot and short description of the third key feature." },
@@ -233,13 +233,24 @@ function FeaturesSection({ features }: { features: CaseStudyFeature[] }) {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f) => (
           <article
             key={f.title}
             className="group overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft"
           >
-            {f.image ? (
+            {f.video ? (
+              <div className="aspect-[4/5] overflow-hidden bg-muted">
+                <video
+                  src={f.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+            ) : f.image ? (
               <div className="aspect-[4/5] overflow-hidden bg-muted">
                 <img
                   src={f.image}
