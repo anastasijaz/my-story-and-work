@@ -30,6 +30,15 @@ export function ContactForm() {
       setError("Something went wrong. Please try again.");
       return;
     }
+    try {
+      await fetch("/api/public/contact-notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
+      });
+    } catch (err) {
+      console.error("Failed to send contact notification email", err);
+    }
     setStatus("success");
     setForm({ name: "", email: "", message: "" });
   };

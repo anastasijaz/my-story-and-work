@@ -17,6 +17,7 @@ import { Route as ProjectsMarieRouteImport } from './routes/projects.marie'
 import { Route as ProjectsLegacyRouteImport } from './routes/projects.legacy'
 import { Route as ProjectsHrToolRouteImport } from './routes/projects.hr-tool'
 import { Route as ProjectsHoreichRouteImport } from './routes/projects.horeich'
+import { Route as ApiPublicContactNotifyRouteImport } from './routes/api/public/contact-notify'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -58,6 +59,11 @@ const ProjectsHoreichRoute = ProjectsHoreichRouteImport.update({
   path: '/projects/horeich',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicContactNotifyRoute = ApiPublicContactNotifyRouteImport.update({
+  id: '/api/public/contact-notify',
+  path: '/api/public/contact-notify',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -68,6 +74,7 @@ export interface FileRoutesByFullPath {
   '/projects/melt': typeof ProjectsMeltRoute
   '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
   '/projects/thesis': typeof ProjectsThesisRoute
+  '/api/public/contact-notify': typeof ApiPublicContactNotifyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -78,6 +85,7 @@ export interface FileRoutesByTo {
   '/projects/melt': typeof ProjectsMeltRoute
   '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
   '/projects/thesis': typeof ProjectsThesisRoute
+  '/api/public/contact-notify': typeof ApiPublicContactNotifyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -89,6 +97,7 @@ export interface FileRoutesById {
   '/projects/melt': typeof ProjectsMeltRoute
   '/projects/sportbuddy': typeof ProjectsSportbuddyRoute
   '/projects/thesis': typeof ProjectsThesisRoute
+  '/api/public/contact-notify': typeof ApiPublicContactNotifyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -101,6 +110,7 @@ export interface FileRouteTypes {
     | '/projects/melt'
     | '/projects/sportbuddy'
     | '/projects/thesis'
+    | '/api/public/contact-notify'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -111,6 +121,7 @@ export interface FileRouteTypes {
     | '/projects/melt'
     | '/projects/sportbuddy'
     | '/projects/thesis'
+    | '/api/public/contact-notify'
   id:
     | '__root__'
     | '/'
@@ -121,6 +132,7 @@ export interface FileRouteTypes {
     | '/projects/melt'
     | '/projects/sportbuddy'
     | '/projects/thesis'
+    | '/api/public/contact-notify'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -132,6 +144,7 @@ export interface RootRouteChildren {
   ProjectsMeltRoute: typeof ProjectsMeltRoute
   ProjectsSportbuddyRoute: typeof ProjectsSportbuddyRoute
   ProjectsThesisRoute: typeof ProjectsThesisRoute
+  ApiPublicContactNotifyRoute: typeof ApiPublicContactNotifyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -192,6 +205,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsHoreichRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/contact-notify': {
+      id: '/api/public/contact-notify'
+      path: '/api/public/contact-notify'
+      fullPath: '/api/public/contact-notify'
+      preLoaderRoute: typeof ApiPublicContactNotifyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -204,6 +224,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsMeltRoute: ProjectsMeltRoute,
   ProjectsSportbuddyRoute: ProjectsSportbuddyRoute,
   ProjectsThesisRoute: ProjectsThesisRoute,
+  ApiPublicContactNotifyRoute: ApiPublicContactNotifyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
