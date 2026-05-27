@@ -52,6 +52,12 @@ export const Route = createFileRoute("/projects/legacy")({
         { k: "★", v: "Jury favourite", d: "Selected for follow-up talks" },
         { k: "1", v: "Insurer partner", d: "Nürnberger Versicherung" },
       ]}
+      features={[
+        { title: "Checkliste", description: "A guided step-by-step checklist that breaks end-of-life planning into small, manageable tasks.", video: "/videos/checkliste.mp4" },
+        { title: "Datei hochladen", description: "Securely upload and store important documents — wills, insurance papers, contracts — in one place.", video: "/videos/datei-hochladen.mp4" },
+        { title: "Digitaler Nachlass", description: "Manage the digital estate: accounts, subscriptions and online presences that should be handled later.", video: "/videos/digitaler-nachlass.mp4" },
+        { title: "Geteilt mit", description: "Decide exactly who has access to what — share specific items with trusted family members or advisors.", video: "/videos/geteilt-mit.mp4" },
+      ]}
       reflections={{
         eyebrow: "Reflections",
         title: "What surprised us.",
