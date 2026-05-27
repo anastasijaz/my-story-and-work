@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
-export type Lang = "en" | "de" | "sr";
+export type Lang = "en" | "de";
 
 type Dict = Record<string, string>;
 
@@ -79,7 +79,7 @@ const translations: Record<Lang, Dict> = {
     "aboutMe.picPlaceholder": "Add a picture of you",
     "lang.German": "German",
     "lang.English": "English",
-    "lang.Serbian": "Serbian",
+
 
     "contact.title": "Let's build something useful together.",
     "contact.subtitle":
@@ -162,7 +162,7 @@ const translations: Record<Lang, Dict> = {
     "aboutMe.picPlaceholder": "Bild hinzufügen",
     "lang.German": "Deutsch",
     "lang.English": "Englisch",
-    "lang.Serbian": "Serbisch",
+
 
     "contact.title": "Lass uns gemeinsam etwas Nützliches bauen.",
     "contact.subtitle":
@@ -170,89 +170,6 @@ const translations: Record<Lang, Dict> = {
 
     "footer.copy": "© {year} — Portfolio. Mit Sorgfalt gebaut.",
     "footer.tagline": "Elektrotechnik · Energiesysteme",
-  },
-  sr: {
-    "nav.about": "O meni",
-    "nav.highlights": "Istaknuto",
-    "nav.work": "Projekti",
-    "nav.thesis": "Diplomski",
-    "nav.contact": "Kontakt",
-    "nav.resume": "Biografija",
-
-    "hero.badge": "Dostupna za frilens projekte i poslove u product managementu",
-    "hero.title.l1": "Sistemi koji",
-    "hero.title.l2a": "daju ",
-    "hero.title.l2b": "smisao",
-    "hero.title.l2c": " energiji,",
-    "hero.title.l3": "ljudima i proizvodima.",
-    "hero.subtitle":
-      "Studentkinja sam industrijskog inženjerstva sa fokusom na energetske sisteme i diplomom iz elektrotehnike. Pored fakulteta, pravim proizvode na hakatonima, sa startapima i u okviru inkubatorskih izazova — pretvaram haotične probleme u gotov softver.",
-    "hero.download": "Preuzmi biografiju",
-    "hero.seeWork": "Pogledaj projekte →",
-
-    "about.kicker": "O meni",
-    "about.title": "Graditeljka sa inženjerskim načinom razmišljanja.",
-    "about.p1":
-      "Moj akademski dom je elektrotehnika — disciplina koja optimizuje saradnju sistema, ljudi i resursa. Specijalizacija u energetskim sistemima mi omogućava da taj pogled usmerim na najvažniju tranziciju naše generacije.",
-    "about.p2":
-      "Van predavaonice pravim proizvode: aplikacije za upoznavanje, healthtech, osiguranje, interne alate. Volim da od nejasnog brifa na početku hakatona za vikend napravim nešto što korisnici stvarno mogu da otvore. Posebno mi je važno da korisnik bude u centru.",
-
-    "highlights.kicker": "Iz biografije",
-    "highlights.title": "Odabrana iskustva.",
-    "highlights.full": "Kompletna biografija ↓",
-    "highlights.hackathons.v": "Hakatona",
-    "highlights.hackathons.d": "Uključujući Junction Helsinki",
-    "highlights.slush.v": "Volonter",
-    "highlights.slush.d": "Na terenu u Helsinkiju",
-    "highlights.tech.v": "Talenat inkubatora",
-    "highlights.tech.d": "Učesnica selektovanog programa",
-    "highlights.energy.v": "Specijalizacija",
-    "highlights.energy.d": "Fokus industrijskog inženjerstva",
-
-    "work.kicker": "Odabrani radovi",
-    "work.title": "Šest proizvoda, šest različitih problema.",
-    "work.subtitle":
-      "Od femtech-a do osiguranja, svaki projekat je počeo od stvarne potrebe korisnika i kratkog roka.",
-    "work.readCase": "Pročitaj studiju slučaja",
-    "work.empty": "Još nema projekata u ovoj kategoriji.",
-    "filter.All": "Sve",
-    "filter.Mobile": "Mobilno",
-    "filter.Web": "Web",
-    "filter.Social": "Društveno",
-    "filter.Health": "Zdravlje",
-    "filter.Internal": "Interno",
-
-    "thesis.kicker": "Diplomski rad",
-    "thesis.title": "Gde živi moja inženjerska strana.",
-    "thesis.linkShort": "Pročitaj studiju →",
-    "thesis.tag": "Energetski sistemi · Simulacija u realnom vremenu",
-    "thesis.heading": "PowerFactory → RSCAD alat za konverziju",
-    "thesis.desc":
-      "Automatizovana pipeline koja prevodi DIgSILENT PowerFactory modele mreže u RSCAD draft fajlove za simulaciju u realnom vremenu na RTDS hardveru — sati ručnog rada postaju minuti.",
-    "thesis.b1": "· Python alat povrh PowerFactory API-ja",
-    "thesis.b2": "· Međumodel nezavisan od alata",
-    "thesis.b3": "· Validacija na referentnim mrežama (<1% odstupanja u tokovima snaga)",
-    "thesis.readFull": "Pročitaj celu studiju slučaja",
-
-    "aboutMe.kicker": "O meni",
-    "aboutMe.title": "Kratka priča iza rada.",
-    "aboutMe.p1":
-      "Dizajnerka sam i buduća inženjerka. Moj akademski put je počeo sa B.Sc. iz elektrotehnike, sa specijalizacijom u energetskim sistemima — i kulminirao diplomskim radom o automatizovanoj konverziji PowerFactory modela u RSCAD za simulaciju u realnom vremenu.",
-    "aboutMe.p2":
-      "Paralelno, poslednjih godina dizajniram mobilne i web proizvode — od zdravstvenih i dating aplikacija do internih alata i sajtova za startape — sa fokusom na jasno korisničko istraživanje, oštro definisanje problema i ispoliran UI u Figmi.",
-    "aboutMe.p3":
-      "Stalo mi je do rada koji je istovremeno strog i ljudski: zasnovan na čvrstim inženjerskim osnovama, ali oblikovan pažljivim slušanjem onih koji će ga koristiti.",
-    "aboutMe.picPlaceholder": "Dodaj svoju sliku",
-    "lang.German": "Nemački",
-    "lang.English": "Engleski",
-    "lang.Serbian": "Srpski",
-
-    "contact.title": "Hajde da zajedno napravimo nešto korisno.",
-    "contact.subtitle":
-      "Trenutno sam otvorena za prakse, diplomske projekte i frilens saradnje u energetici, održivosti i proizvodu.",
-
-    "footer.copy": "© {year} — Portfolio. Napravljeno s pažnjom.",
-    "footer.tagline": "Elektrotehnika · Energetski sistemi",
   },
 };
 
@@ -272,7 +189,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY) as Lang | null;
-      if (stored && (stored === "en" || stored === "de" || stored === "sr")) {
+      if (stored && (stored === "en" || stored === "de")) {
         setLangState(stored);
       }
     } catch {
@@ -315,7 +232,6 @@ export function LanguageToggle({ className = "" }: { className?: string }) {
   const options: { code: Lang; label: string }[] = [
     { code: "de", label: "DE" },
     { code: "en", label: "EN" },
-    { code: "sr", label: "SR" },
   ];
   return (
     <div
