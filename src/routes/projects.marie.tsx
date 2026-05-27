@@ -129,6 +129,45 @@ function MarieCase() {
         </div>
       </section>
 
+      {/* Product features */}
+      <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Product features</p>
+          <h2 className="font-display mt-3 text-3xl md:text-4xl">Three things it does well.</h2>
+          <p className="mt-4 text-muted-foreground">
+            Drop in screenshots or visuals for each of the product's headline features.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            { title: "AI companion", description: "A conversational, voice-first companion that turns how you feel into a log — no forms, no friction.", image: shotAI },
+            { title: "Symptoms tracking", description: "Hot flashes, sleep, activity and medication captured on one calm, shareable timeline.", image: shotTracker },
+            { title: "Personalized fitness", description: "Training plans that adapt to today's energy, available time, and where you hurt.", image: shotFitness },
+          ].map((f) => (
+            <article
+              key={f.title}
+              className="group overflow-hidden rounded-3xl border border-border bg-card shadow-card transition hover:-translate-y-1 hover:shadow-soft"
+            >
+              <div className="aspect-[4/5] overflow-hidden bg-muted">
+                <img
+                  src={f.image}
+                  alt={f.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1280}
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-display text-xl">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Screenshots */}
 
       {/* Outcomes */}
