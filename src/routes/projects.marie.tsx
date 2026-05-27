@@ -130,37 +130,6 @@ function MarieCase() {
       </section>
 
       {/* Screenshots */}
-      <section className="border-y border-border/60 bg-gradient-soft">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Inside the app</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">Three flows we shipped first.</h2>
-            <p className="mt-4 text-muted-foreground">
-              We narrowed scope ruthlessly — only the screens that proved the
-              core value made it into the prototype.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { src: shotHome, t: "Daily home", d: "A warm, low-pressure entry point with quick stats and gentle daily nudges." },
-              { src: shotAI, t: "AI companion", d: "A voice-first conversational companion that logs how you're feeling in plain words." },
-              { src: shotTracker, t: "Symptom tracking", d: "Hot flashes, sleep, activity and medication — captured on one calm timeline." },
-              { src: shotFitness, t: "Personalized fitness", d: "Training plans tuned to your energy, time, and discomfort that day." },
-            ].map((s) => (
-              <figure key={s.t} className="overflow-hidden rounded-3xl border border-border bg-card shadow-card">
-                <div className="aspect-[2/3] overflow-hidden bg-muted">
-                  <img src={s.src} alt={s.t} loading="lazy" width={1024} height={1536} className="h-full w-full object-cover" />
-                </div>
-                <figcaption className="p-5">
-                  <div className="text-base font-semibold">{s.t}</div>
-                  <p className="mt-1 text-sm text-muted-foreground">{s.d}</p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Outcomes */}
       <section className="mx-auto max-w-6xl px-6 py-20 md:py-28">
