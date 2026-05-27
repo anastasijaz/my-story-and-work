@@ -125,7 +125,7 @@ function MarieCase() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { src: shotHome, t: "Daily home", d: "A warm, low-pressure entry point with quick stats and gentle daily nudges." },
               { src: shotAI, t: "AI companion", d: "A voice-first conversational companion that logs how you're feeling in plain words." },
@@ -216,9 +216,9 @@ function MarieCase() {
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {[
-            { title: "Daily home", description: "A warm, low-pressure entry point with quick access to trackers and tips.", image: shot1 },
-            { title: "Symptom check-in", description: "Capture mood and symptoms in seconds — building a personal timeline.", image: shot2 },
-            { title: "Trusted content", description: "Expert-reviewed articles and a community feed for shared experience.", image: shot3 },
+            { title: "AI companion", description: "A conversational, voice-first companion that turns how you feel into a log — no forms, no friction.", image: shotAI },
+            { title: "Symptoms tracking", description: "Hot flashes, sleep, activity and medication captured on one calm, shareable timeline.", image: shotTracker },
+            { title: "Personalized fitness", description: "Training plans that adapt to today's energy, available time, and where you hurt.", image: shotFitness },
           ].map((f) => (
             <article
               key={f.title}
