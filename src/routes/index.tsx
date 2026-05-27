@@ -173,7 +173,7 @@ function Index() {
               />
             </div>
           </div>
-          <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
+          <div className="space-y-5 self-center text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
           </div>
