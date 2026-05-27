@@ -165,7 +165,7 @@ function Index() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:col-span-3 md:text-lg">
             <p>
-              My academic home is industrial engineering — the discipline of
+              My academic home is electrical engineering — the discipline of
               optimising how systems, people and resources work together. My
               specialisation in energy systems lets me put that lens on the most
               consequential transition of our generation.
