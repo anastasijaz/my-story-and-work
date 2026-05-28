@@ -32,7 +32,7 @@ const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
   { title: "User research", description: "Conducted interviews (27 with potential users, 3 with funeral homes) to understand emotional barriers and practical needs. Found that most people don’t fear death itself — they fear becoming a burden to their families." },
   { title: "Problem definition", description: "Identified the opportunity to create a tool that provides peace of mind through structured organization and accessibility." },
   { title: "Ideation", description: "Sketched and brainstormed key app functions: checklists, document storage, wish-sharing, and family access features as well as information on possible end of life options." },
-  { title: "UI / UX design", description: "Translated the chosen direction into wireframes, then a polished UI in Figma — components, states, and a clear user flow." },
+  { title: "UI / UX design", description: "Designed a simple, intuitive interface tailored to users aged 50–70. Focused on large typography, clear icons, and a calm visual aesthetic aligned with Nürnberger’s branding." },
   { title: "Prototyping", description: "Built an interactive prototype to test the core flow with real users and pressure-test edge cases before any production code was written." },
   { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders at the insurance company." },
 ];
