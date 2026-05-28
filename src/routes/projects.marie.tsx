@@ -66,7 +66,7 @@ function MarieCase() {
               </div>
             </div>
 
-            <div className="relative mx-auto w-full max-w-[320px]">
+            <div className="relative mx-auto w-full max-w-[280px]">
               {/* iPhone frame */}
               <div className="relative rounded-[3rem] bg-slate-900 p-2 shadow-2xl ring-1 ring-white/10">
                 {/* Dynamic Island */}
