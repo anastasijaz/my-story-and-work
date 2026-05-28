@@ -202,7 +202,7 @@ function MarieCase() {
 
           <ol className="mt-12 grid gap-5 md:grid-cols-2">
             {[
-              { title: "Problem Discovery", description: "Interviewed 12+ women navigating peri- and post-menopause to map the real lived experience and the gaps in current support." },
+              { title: "Problem Discovery", description: "In collaboration with Bionorica, we learned that their natural menopause medication requires three months of continuous use before showing effects. However, many users discontinue treatment early due to lack of perceived progress." },
               { title: "Problem definition", description: "Synthesised insights into one sentence: women feel dismissed and under-informed during menopause, and need a daily companion they trust." },
               { title: "Ideation", description: "Sprinted through concepts — from clinical journals to social communities — and converged on a soft, daily check-in product." },
               { title: "UI / UX design", description: "Designed a calm, warm interface in Figma with a strong focus on accessibility and tone of voice for a sensitive topic." },
