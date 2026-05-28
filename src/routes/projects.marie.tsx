@@ -203,7 +203,7 @@ function MarieCase() {
           <ol className="mt-12 grid gap-5 md:grid-cols-2">
             {[
               { title: "Problem Discovery", description: "In collaboration with Bionorica, we learned that their natural menopause medication requires three months of continuous use before showing effects. However, many users discontinue treatment early due to lack of perceived progress." },
-              { title: "Identified that many women feel unheard and unsupported during menopause — both medically and emotionally", description: "Synthesised insights into one sentence: women feel dismissed and under-informed during menopause, and need a daily companion they trust." },
+              { title: "User Research", description: "Identified that many women feel unheard and unsupported during menopause — both medically and emotionally.\n- Manual symptom logging is tedious and often inconsistent.\n- Existing apps lack emotional intelligence and personalization." },
               { title: "Pain Point Analysis", description: "- Manual symptom logging is tedious and often inconsistent.\n- Existing apps lack emotional intelligence and personalization." },
               { title: "UI / UX design", description: "Designed a calm, warm interface in Figma with a strong focus on accessibility and tone of voice for a sensitive topic." },
               { title: "Prototyping", description: "Built an interactive Figma prototype and validated the symptom check-in flow with returning interview participants." },
