@@ -205,7 +205,7 @@ function MarieCase() {
               { title: "Problem Discovery", description: "In collaboration with Bionorica, we learned that their natural menopause medication requires three months of continuous use before showing effects. However, many users discontinue treatment early due to lack of perceived progress." },
               { title: "User Research", description: "Identified that many women feel unheard and unsupported during menopause — both medically and emotionally.\n- Manual symptom logging is tedious and often inconsistent.\n- Existing apps lack emotional intelligence and personalization." },
               { title: "Ideation", description: "Designed MARIE, a conversational AI assistant that learns from user patterns and wearable data to provide personalized insights, reminders, and encouragement. MARIE’s tone was built to be empathetic, intuitive, and supportive — like a “smart best friend” that truly understands you." },
-              { title: "UI / UX design", description: "Designed a calm, warm interface in Figma with a strong focus on accessibility and tone of voice for a sensitive topic." },
+              { title: "UI / UX design", description: "- Calm, elegant color palette and clear typography for readability.\n- Intuitive symptom tracking and progress visualization.\n- Integration concepts for smartwatch and wearable data to minimize manual input." },
               { title: "Prototyping", description: "Built an interactive Figma prototype and validated the symptom check-in flow with returning interview participants." },
               { title: "Presentation", description: "Pitched Marie to the hackathon jury with a story arc — context, insight, product, impact — and finished in the top 5." },
             ].map((step, i) => (
