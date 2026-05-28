@@ -219,7 +219,15 @@ function MarieCase() {
                   </div>
                   <div>
                     <h3 className="font-display text-xl">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                    {step.description.includes('\n- ') ? (
+                      <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
+                        {step.description.split('\n').filter(line => line.trim()).map((line, idx) => (
+                          <li key={idx}>{line.replace(/^- /, '')}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                    )}
                   </div>
                 </div>
               </li>
