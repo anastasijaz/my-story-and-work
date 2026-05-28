@@ -31,7 +31,7 @@ export const Route = createFileRoute("/projects/legacy")({
         title: "Nobody opens the folder.",
         body: (
           <>
-            <p>End-of-life planning sits at the intersection of legal, financial and emotional friction. Most people start it once, get overwhelmed, and never come back — leaving families to untangle decisions in the worst possible moment.</p>
+            <p>Developed a digital concept for an app that helps users organize end-of-life plans — from essential documents to funeral wishes — so their families can easily access everything when needed.</p>
             <p>Our corprate partner at ZoHo asked us to make this approachable without trivialising it.</p>
           </>
         ),
@@ -63,8 +63,11 @@ export const Route = createFileRoute("/projects/legacy")({
         title: "What surprised us.",
         body: (
           <>
-            <p>Users didn't want a product that pretends death isn't happening — they wanted one that treats them as adults. The biggest design wins came from removing softening, not adding it.</p>
-            <p>Next: integration with notarial services so the artefacts produced are legally usable, not just emotionally useful.</p>
+            <p>Users didn't want a product that pretends death isn't happening — they want a solution that assists them. </p>
+            <p>Impact: 
+              <br />· Offered an emotionally resonant approach to promoting death insurance through empathy-driven design
+              <br />· Simplified complex, emotionally heavy tasks for older users
+              <br />· Received positive feedback from our corporate partner for clarity and user focus</p>
           </>
         ),
       }}
