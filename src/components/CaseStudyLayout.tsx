@@ -34,7 +34,7 @@ const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
   { title: "Ideation", description: "Sketched and brainstormed key app functions: checklists, document storage, wish-sharing, and family access features as well as information on possible end of life options." },
   { title: "UI / UX design", description: "Designed a simple, intuitive interface tailored to users aged 50–70. Focused on large typography, clear icons, and a calm visual aesthetic aligned with Nürnberger’s branding." },
   { title: "Prototyping", description: "Built the prototype in Figma, emphasizing easy navigation and seamless document uploads." },
-  { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders at the insurance company." },
+  { title: "Presentation", description: "Pitched the concept to the Nürnberger team, highlighting user insights, emotional impact, and business potential." },
 ];
 
 const DEFAULT_FEATURES: CaseStudyFeature[] = [
