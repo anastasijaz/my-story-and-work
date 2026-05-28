@@ -233,6 +233,14 @@ function MarieCase() {
                           </>
                         );
                       }
+                      if (step.description.trim().startsWith('- ')) {
+                        const bullets = step.description.trim().split('\n').filter(l => l.trim()).map(l => l.replace(/^- /, ''));
+                        return (
+                          <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
+                            {bullets.map((b, idx) => <li key={idx}>{b}</li>)}
+                          </ul>
+                        );
+                      }
                       return <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>;
                     })()}
                   </div>
