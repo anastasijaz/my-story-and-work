@@ -219,15 +219,30 @@ function MarieCase() {
                   </div>
                   <div>
                     <h3 className="font-display text-xl">{step.title}</h3>
-                    {step.description.match(/(^|\n)- /) ? (
-                      <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
-                        {step.description.split('\n').filter(line => line.trim()).map((line, idx) => (
-                          <li key={idx}>{line.replace(/^- /, '')}</li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
-                    )}
+                    {(() => {
+                      const match = step.description.match(/(^.*?)\n(- .+)/s);
+                      if (match) {
+                        const [, para, rest] = match;
+                        const bullets = rest.trim().split('\n').filter(l => l.trim()).map(l => l.replace(/^- /, ''));
+                        return (
+                          <>
+                            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{para.trim()}</p>
+                            <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
+                              {bullets.map((b, idx) => <li key={idx}>{b}</li>)}
+                            </ul>
+                          </>
+                        );
+                      }
+                      if (step.description.trim().startsWith('- ')) {
+                        const bullets = step.description.trim().split('\n').filter(l => l.trim()).map(l => l.replace(/^- /, ''));
+                        return (
+                          <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
+                            {bullets.map((b, idx) => <li key={idx}>{b}</li>)}
+                          </ul>
+                        );
+                      }
+                      return <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{step.description}</p>;
+                    })()}
                   </div>
                 </div>
               </li>
