@@ -29,12 +29,12 @@ export type CaseStudyProps = {
 };
 
 const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
-  { title: "User research", description: "Interviews, desk research and competitive scans to understand the people the product is built for and what they actually struggle with." },
+  { title: "User research", description: "Built an interactive prototype in figma to test the core flow with real user interviews and pressure-test edge cases." },
   { title: "Problem definition", description: "Synthesised insights into a sharp problem statement and a concrete \"How might we…\" framing for the team to align on." },
   { title: "Ideation", description: "Diverged with quick sketches and concept sprints, then converged on the strongest direction using impact-vs-effort scoring." },
   { title: "UI / UX design", description: "Translated the chosen direction into wireframes, then a polished UI in Figma — components, states, and a clear user flow." },
   { title: "Prototyping", description: "Built an interactive prototype to test the core flow with real users and pressure-test edge cases before any production code was written." },
-  { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders, jury or the wider team." },
+  { title: "Presentation", description: "Packaged the work into a story — context, insight, solution, impact — and pitched it to stakeholders at the insurance company." },
 ];
 
 const DEFAULT_FEATURES: CaseStudyFeature[] = [
