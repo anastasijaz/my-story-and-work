@@ -32,7 +32,7 @@ export const Route = createFileRoute("/projects/legacy")({
         body: (
           <>
             <p>End-of-life planning sits at the intersection of legal, financial and emotional friction. Most people start it once, get overwhelmed, and never come back — leaving families to untangle decisions in the worst possible moment.</p>
-            <p>Nürnberger Versicherung asked us to make this approachable without trivialising it.</p>
+            <p>Our corprate partner at ZoHo asked us to make this approachable without trivialising it.</p>
           </>
         ),
       }}
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/projects/legacy")({
         title: "Small steps, soft tone.",
         body: (
           <>
-            <p>We reframed the product as a series of 5-minute conversations rather than a 200-question form. Each step produces a usable artefact — a will draft, a contact list, a wish.</p>
+            <p>We reframed the product as a series of short conversations rather than a 200-question form. Each step produces a usable artefact — a will draft, a contact list, a wish.</p>
             <p>Tone of voice was as much a deliverable as the UI: warm, plain-language, never clinical.</p>
           </>
         ),
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/projects/legacy")({
         { k: "1", v: "Figma prototype", d: "Onboarding + 3 main features" },
         { k: "5min", v: "Avg. session length", d: "Designed for low pressure" },
         { k: "★", v: "Currently in development", d: "Selected for follow-up talks" },
-        { k: "1", v: "Insurer partner", d: "Nürnberger Versicherung" },
+        { k: "1", v: "Insurence partner", d: "Nürnberger Versicherung" },
       ]}
       features={[
         { title: "Checkliste", description: "A guided step-by-step checklist that breaks end-of-life planning into small, manageable tasks.", video: "/videos/checkliste.mp4" },
