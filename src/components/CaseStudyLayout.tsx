@@ -29,7 +29,7 @@ export type CaseStudyProps = {
 };
 
 const DEFAULT_PROCESS: CaseStudyProcessStep[] = [
-  { title: "User research", description: "Built an interactive prototype in figma to test the core flow with real user interviews and pressure-test edge cases." },
+  { title: "User research", description: "Conducted interviews to understand emotional barriers and practical needs. Found that most people don’t fear death itself — they fear becoming a burden to their families." },
   { title: "Problem definition", description: "Synthesised insights into a sharp problem statement and a concrete \"How might we…\" framing for the team to align on." },
   { title: "Ideation", description: "Diverged with quick sketches and concept sprints, then converged on the strongest direction using impact-vs-effort scoring." },
   { title: "UI / UX design", description: "Translated the chosen direction into wireframes, then a polished UI in Figma — components, states, and a clear user flow." },
