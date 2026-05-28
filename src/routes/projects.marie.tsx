@@ -25,7 +25,7 @@ const outcomes = [
   { k: "Top 5", v: "Team finish", d: "Selected by jury for impact" },
 ];
 
-const stack = ["React Native", "TypeScript", "Figma", "Notion AI", "Firebase"];
+const stack = ["TypeScript", "Figma", "Notion AI", "Firebase"];
 
 function MarieCase() {
   return (
