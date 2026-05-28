@@ -21,7 +21,7 @@ export const Route = createFileRoute("/projects/legacy")({
       coverAlt="Legacy — abstract cover"
       stack={["React", "TypeScript", "Tailwind", "Supabase", "Figma"]}
       meta={[
-        { l: "Role", v: "Product & UX" },
+        { l: "Role", v: "Product Design · UI/UX · User Research · Pitch Presentation" },
         { l: "Team", v: "2 " },
         { l: "Timeline", v: "Zollhof Talent Programm (3 Months)" },
         { l: "Status", v: "Pitched to Nürnberger" },
