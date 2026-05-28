@@ -93,8 +93,8 @@ function MarieCase() {
       <section className="border-b border-border/60">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 sm:grid-cols-2 md:grid-cols-4">
           {[
-            { l: "Role", v: "Product & front-end" },
-            { l: "Team", v: "4 — design, dev, research" },
+            { l: "Role", v: "Product Design · UI/UX · User Research · Concept Development · Pitch Presentation" },
+            { l: "Team", v: "4 " },
             { l: "Timeline", v: "48-hour hackathon" },
             { l: "Status", v: "Prototype + pitch" },
           ].map((m) => (
