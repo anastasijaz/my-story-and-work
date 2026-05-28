@@ -219,7 +219,7 @@ function MarieCase() {
                   </div>
                   <div>
                     <h3 className="font-display text-xl">{step.title}</h3>
-                    {step.description.includes('\n- ') ? (
+                    {step.description.match(/(^|\n)- /) ? (
                       <ul className="mt-2 list-disc pl-4 text-sm leading-relaxed text-muted-foreground space-y-1">
                         {step.description.split('\n').filter(line => line.trim()).map((line, idx) => (
                           <li key={idx}>{line.replace(/^- /, '')}</li>
