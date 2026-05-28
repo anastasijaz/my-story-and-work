@@ -21,8 +21,8 @@ export const Route = createFileRoute("/projects/melt")({
       coverAlt="Melt — abstract cover"
       stack={["React Native", "TypeScript", "Expo", "Supabase", "Figma"]}
       meta={[
-        { l: "Role", v: "Product & front-end" },
-        { l: "Team", v: "3 — design, dev, growth" },
+        { l: "Role", v: "Product Design · UI/UX · User Research · Concept Development · Pitch Presentation" },
+        { l: "Team", v: "3 " },
         { l: "Timeline", v: "Hackathon weekend" },
         { l: "Status", v: "Pitched prototype" },
       ]}

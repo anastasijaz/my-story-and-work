@@ -21,8 +21,8 @@ export const Route = createFileRoute("/projects/sportbuddy")({
       coverAlt="SportBuddy — abstract cover"
       stack={["React Native", "TypeScript", "Expo", "Supabase", "Mapbox"]}
       meta={[
-        { l: "Role", v: "Product & front-end" },
-        { l: "Team", v: "3 — dev + design" },
+        { l: "Role", v: "Product Design · UI/UX · User Research · Concept Development · Pitch Presentation" },
+        { l: "Team", v: "3 " },
         { l: "Timeline", v: "Hackathon weekend" },
         { l: "Status", v: "Working prototype" },
       ]}
