@@ -137,7 +137,7 @@ export function FunFacts() {
 
         {/* fact panel */}
         <div className="rounded-3xl border border-border bg-card p-8 shadow-card">
-          {active ? (
+          {active && (
             <div key={active.id} className="animate-fade-up">
               <span className="text-xs font-semibold uppercase tracking-wider text-primary">
                 {t(active.labelKey)}
@@ -153,8 +153,6 @@ export function FunFacts() {
                 {t("fun.close")}
               </button>
             </div>
-          ) : (
-            <p className="text-muted-foreground">{t("fun.hint")}</p>
           )}
         </div>
       </div>
