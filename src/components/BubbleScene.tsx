@@ -1,6 +1,6 @@
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { MeshTransmissionMaterial, OrbitControls, Environment, Lightformer } from "@react-three/drei";
+import { MeshTransmissionMaterial, OrbitControls, Environment } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
 
@@ -152,16 +152,30 @@ export default function BubbleScene() {
       <pointLight position={[0, 0, 0]} intensity={6} distance={9} color="#ff8a5c" />
       <pointLight position={[4, 4, 4]} intensity={18} color="#ff6f91" />
       <pointLight position={[-5, -2, -3]} intensity={12} color="#7fd4ff" />
-      {/* palette-tinted studio lighting via lightformers */}
-      <Environment resolution={64} environmentIntensity={4.5} background={false} frames={1}>
-        <color attach="background" args={["#120a1c"]} />
-        <Lightformer form="circle" intensity={6} color="#ff9a6b" position={[5, 3, 3]} scale={6} target={[0, 0, 0]} />
-        <Lightformer form="circle" intensity={5} color="#ff6f91" position={[-5, -1, 2]} scale={6} target={[0, 0, 0]} />
-        <Lightformer form="circle" intensity={4} color="#7fd4ff" position={[0, -5, -3]} scale={7} target={[0, 0, 0]} />
-        <Lightformer form="ring" intensity={3.5} color="#b48cff" position={[0, 5, -4]} scale={5} target={[0, 0, 0]} />
-      </Environment>
+      <Environment preset="sunset" background={false} environmentIntensity={1.4} />
 
 
+
+      {/* soft colour backdrop, visible through the bubbles */}
+      <group position={[0, 0, -16]}>
+        {([
+          ["#ff9a6b", [-4.4, 2.2, 0], 7],
+          ["#ff6f91", [3.6, -1.6, 0], 8],
+          ["#b48cff", [0.6, 3.4, -1], 6.5],
+          ["#7fd4ff", [-2.2, -3.4, -1], 7],
+        ] as const).map(([color, pos, size], i) => (
+          <sprite key={i} position={pos as unknown as [number, number, number]} scale={[size, size, 1]}>
+            <spriteMaterial
+              map={glowTexture}
+              color={color}
+              transparent
+              opacity={0.42}
+              blending={THREE.AdditiveBlending}
+              depthWrite={false}
+            />
+          </sprite>
+        ))}
+      </group>
 
       <CentralBubble />
 
