@@ -161,26 +161,6 @@ export default function BubbleScene() {
         <Lightformer form="ring" intensity={3.5} color="#b48cff" position={[0, 5, -4]} scale={5} target={[0, 0, 0]} />
       </Environment>
 
-      {/* soft colour backdrop, visible through the bubbles */}
-      <group position={[0, 0, -16]}>
-        {([
-          ["#ff9a6b", [-4.4, 2.2, 0], 7],
-          ["#ff6f91", [3.6, -1.6, 0], 8],
-          ["#b48cff", [0.6, 3.4, -1], 6.5],
-          ["#7fd4ff", [-2.2, -3.4, -1], 7],
-        ] as const).map(([color, pos, size], i) => (
-          <sprite key={i} position={pos as unknown as [number, number, number]} scale={[size, size, 1]}>
-            <spriteMaterial
-              map={glowTexture}
-              color={color}
-              transparent
-              opacity={0.42}
-              blending={THREE.AdditiveBlending}
-              depthWrite={false}
-            />
-          </sprite>
-        ))}
-      </group>
 
 
       <CentralBubble />
