@@ -77,6 +77,36 @@ const highlightKeys = [
   { k: "Energy", vKey: "highlights.energy.v", dKey: "highlights.energy.d" },
 ];
 
+const CAT = {
+  work: { key: "tl.cat.work", color: "--cat-work" },
+  venture: { key: "tl.cat.venture", color: "--cat-venture" },
+  hack: { key: "tl.cat.hack", color: "--cat-hack" },
+  cert: { key: "tl.cat.cert", color: "--cat-cert" },
+} as const;
+
+const timelineCategories = Object.values(CAT);
+
+type TimelineItem = {
+  id: string;
+  catKey: string;
+  color: string;
+  hasDesc: boolean;
+};
+
+const timeline: TimelineItem[] = [
+  { id: "tl.msc", ...CAT.cert, catKey: CAT.cert.key, hasDesc: false },
+  { id: "tl.horeich", catKey: CAT.work.key, color: CAT.work.color, hasDesc: true },
+  { id: "tl.hack25", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.marie", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.zollhof", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.hack24", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.sport", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.fau", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: true },
+  { id: "tl.hack23", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.siemens", catKey: CAT.work.key, color: CAT.work.color, hasDesc: true },
+  { id: "tl.bsc", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: false },
+];
+
 function Index() {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
