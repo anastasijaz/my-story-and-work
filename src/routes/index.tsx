@@ -11,6 +11,7 @@ import projThesis from "@/assets/proj-thesis.jpg";
 import { ContactForm } from "@/components/ContactForm";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 import { LanguageToggle, useLanguage } from "@/lib/i18n";
+import { FunFacts } from "@/components/FunFacts";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -412,6 +413,8 @@ function Index() {
       </section>
 
 
+
+      <FunFacts />
 
       <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-warm p-10 text-primary-foreground shadow-glow md:p-16">

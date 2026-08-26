@@ -136,6 +136,19 @@ const translations: Record<Lang, Dict> = {
     "tl.bsc.date": "Mar 2020 – 2026",
 
 
+    "fun.kicker": "Fun facts",
+    "fun.title": "Fun facts about me.",
+    "fun.subtitle":
+      "Move your cursor into the system, follow a ball and click it to reveal a fun fact.",
+    "fun.hint": "Click one of the orbiting balls to reveal a fun fact.",
+    "fun.close": "Close",
+    "fun.f1.label": "Languages",
+    "fun.f1": "I'm trilingual — a gift of my upbringing between languages and cultures.",
+    "fun.f2.label": "USA · 5 years",
+    "fun.f2": "I've lived in the USA for a total of five years.",
+    "fun.f3.label": "4 + 1",
+    "fun.f3": "Those five years split into four years with my family and one year abroad on my own.",
+
     "contact.title": "Let's build something useful together.",
     "contact.subtitle":
       "I'm currently open to internships, thesis projects and freelance collaborations in energy, sustainability and product.",
@@ -273,6 +286,20 @@ const translations: Record<Lang, Dict> = {
     "tl.bsc.org": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
     "tl.bsc.date": "März 2020 – 2026",
 
+
+    "fun.kicker": "Fun Facts",
+    "fun.title": "Fun Facts über mich.",
+    "fun.subtitle":
+      "Bewege den Cursor ins System, folge einer Kugel und klicke sie an, um einen Fun Fact zu sehen.",
+    "fun.hint": "Klicke auf eine der kreisenden Kugeln, um einen Fun Fact zu entdecken.",
+    "fun.close": "Schließen",
+    "fun.f1.label": "Sprachen",
+    "fun.f1": "Ich bin dreisprachig aufgewachsen — zwischen Sprachen und Kulturen.",
+    "fun.f2.label": "USA · 5 Jahre",
+    "fun.f2": "Ich habe insgesamt fünf Jahre in den USA gelebt.",
+    "fun.f3.label": "4 + 1",
+    "fun.f3":
+      "Diese fünf Jahre teilen sich in vier Jahre mit meiner Familie und ein Auslandsjahr allein.",
 
     "contact.title": "Lass uns gemeinsam etwas Nützliches bauen.",
     "contact.subtitle":
