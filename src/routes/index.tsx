@@ -11,7 +11,7 @@ import projThesis from "@/assets/proj-thesis.jpg";
 import { ContactForm } from "@/components/ContactForm";
 import aboutPortrait from "@/assets/about-portrait.jpg";
 import { LanguageToggle, useLanguage } from "@/lib/i18n";
-import { FunFacts } from "@/components/FunFacts";
+
 
 export const Route = createFileRoute("/")({
   component: Index,
