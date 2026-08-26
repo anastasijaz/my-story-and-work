@@ -154,7 +154,7 @@ export function FunFacts() {
               </button>
             </div>
           ) : (
-            <p className="text-muted-foreground">{t("fun.hint")}</p>
+            
           )}
         </div>
       </div>
