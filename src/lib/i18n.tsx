@@ -287,6 +287,20 @@ const translations: Record<Lang, Dict> = {
     "tl.bsc.date": "März 2020 – 2026",
 
 
+    "fun.kicker": "Fun Facts",
+    "fun.title": "Fun Facts über mich.",
+    "fun.subtitle":
+      "Bewege den Cursor ins System, folge einer Kugel und klicke sie an, um einen Fun Fact zu sehen.",
+    "fun.hint": "Klicke auf eine der kreisenden Kugeln, um einen Fun Fact zu entdecken.",
+    "fun.close": "Schließen",
+    "fun.f1.label": "Sprachen",
+    "fun.f1": "Ich bin dreisprachig aufgewachsen — zwischen Sprachen und Kulturen.",
+    "fun.f2.label": "USA · 5 Jahre",
+    "fun.f2": "Ich habe insgesamt fünf Jahre in den USA gelebt.",
+    "fun.f3.label": "4 + 1",
+    "fun.f3":
+      "Diese fünf Jahre teilen sich in vier Jahre mit meiner Familie und ein Auslandsjahr allein.",
+
     "contact.title": "Lass uns gemeinsam etwas Nützliches bauen.",
     "contact.subtitle":
       "Ich bin offen für Praktika, Abschlussarbeiten und Freelance-Kooperationen in Energie, Nachhaltigkeit und Produkt.",
