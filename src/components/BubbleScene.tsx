@@ -130,7 +130,6 @@ export default function BubbleScene() {
       camera={{ position: [0, 1.4, 8.5], fov: 42 }}
     >
       <color attach="background" args={["#150c22"]} />
-      <fog attach="fog" args={["#150c22", 12, 26]} />
       <ambientLight intensity={1.8} />
         <hemisphereLight args={["#ffb08a", "#7fd4ff", 1.2]} />
       <pointLight position={[0, 0, 0]} intensity={6} distance={9} color="#ff8a5c" />
