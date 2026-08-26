@@ -413,6 +413,8 @@ function Index() {
 
 
 
+      <FunFacts />
+
       <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-warm p-10 text-primary-foreground shadow-glow md:p-16">
           <div className="blob right-[-10%] top-[-30%] h-80 w-80" style={{ background: "white", opacity: 0.25 }} />
