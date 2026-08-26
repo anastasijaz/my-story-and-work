@@ -95,6 +95,12 @@
   --brand-cream: oklch(0.97 0.025 70);
   --brand-ink: oklch(0.22 0.04 25);
 
+  /* Timeline category tokens */
+  --cat-work: oklch(0.66 0.2 35);
+  --cat-venture: oklch(0.68 0.19 5);
+  --cat-hack: oklch(0.74 0.16 60);
+  --cat-cert: oklch(0.58 0.12 250);
+
   --gradient-warm: linear-gradient(135deg, oklch(0.78 0.18 50) 0%, oklch(0.7 0.21 20) 50%, oklch(0.66 0.21 5) 100%);
   --gradient-soft: linear-gradient(135deg, oklch(0.985 0.015 80) 0%, oklch(0.965 0.022 70) 100%);
   --gradient-text: linear-gradient(135deg, oklch(0.62 0.22 35) 0%, oklch(0.6 0.22 5) 100%);
