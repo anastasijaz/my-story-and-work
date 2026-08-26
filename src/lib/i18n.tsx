@@ -103,16 +103,16 @@ const translations: Record<Lang, Dict> = {
     "hero.title.l2c": " und",
     "hero.title.l3": "Produkte verbinden.",
     "hero.subtitle":
-      "Ich studiere Wirtschaftsingenieurwesen mit Schwerpunkt Energietechnik und habe einen Bachelor in Elektrotechnik. Während dem Studium baue ich Produkte bei Hackathons, mit Startups und für Inkubator-Challenges — von chaotischen Problemen zu fertiger Software.",
+      "Ich studiere Wirtschaftsingenieurwesen mit Schwerpunkt Energietechnik und habe einen Bachelor in Elektrotechnik. Während des Studiums Hackathons, mit Startups und für Inkubator-Challenges — von chaotischen Problemen zu fertiger Software.",
     "hero.download": "Lebenslauf herunterladen",
     "hero.seeWork": "Ausgewählte Projekte →",
 
     "about.kicker": "Über mich",
     "about.title": "Eine Macherin mit Ingenieur-Mindset.",
     "about.p1":
-      "Mein akademisches Zuhause ist die Elektrotechnik — die Disziplin, Systeme, Menschen und Ressourcen optimal zusammenwirken zu lassen. Meine Spezialisierung in Energiesystemen erlaubt mir, diesen Blick auf die wichtigste Transformation unserer Generation zu richten.",
+      "Mein akademisches Zuhause ist die Elektrotechnik — die Disziplin, Systeme, Menschen und Ressourcen optimal zusammenwirken zu lassen. Meine Spezialisierung in Energietechnik erlaubt mir, diesen Blick auf die wichtigste Transformation unserer Generation zu richten.",
     "about.p2":
-      "Außerhalb des Hörsaals baue ich Produkte: Dating-Apps, Healthtech, Versicherungs-Challenges, interne Tools. Ich liebe es, ein unscharfes Briefing vom Hackathon-Start am Wochenende in etwas zu verwandeln, das Nutzer:innen tatsächlich öffnen können. Besonders wichtig ist mir, die Nutzer:innen in den Mittelpunkt zu stellen.",
+      "Außerhalb des Hörsaals baue ich Produkte: Dating-Apps, Healthtech, Versicherungs-Challenges und  interne Tools. Ich liebe es, ein unscharfes Briefing vom Hackathon-Start am Wochenende in etwas zu verwandeln, das Nutzer:innen tatsächlich öffnen können. Besonders wichtig ist mir, die Nutzer:innen in den Mittelpunkt zu stellen.",
 
     "highlights.kicker": "Lebenslauf-Highlights",
     "highlights.title": "Ausgewählte Erfahrungen.",
