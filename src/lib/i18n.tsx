@@ -103,7 +103,7 @@ const translations: Record<Lang, Dict> = {
     "hero.title.l2c": " und",
     "hero.title.l3": "Produkte verbinden.",
     "hero.subtitle":
-      "Ich studiere Wirtschaftsingenieurwesen mit Schwerpunkt Energiesysteme und habe einen Bachelor in Elektrotechnik. Zwischen dem Studium baue ich Produkte bei Hackathons, mit Startups und für Inkubator-Challenges — von chaotischen Problemen zu fertiger Software.",
+      "Ich studiere Wirtschaftsingenieurwesen mit Schwerpunkt Energietechnik und habe einen Bachelor in Elektrotechnik. Während dem Studium baue ich Produkte bei Hackathons, mit Startups und für Inkubator-Challenges — von chaotischen Problemen zu fertiger Software.",
     "hero.download": "Lebenslauf herunterladen",
     "hero.seeWork": "Ausgewählte Projekte →",
 
