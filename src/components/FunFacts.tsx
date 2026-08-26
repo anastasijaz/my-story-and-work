@@ -61,7 +61,7 @@ export function FunFacts() {
           {t("fun.kicker")}
         </p>
         <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("fun.title")}</h2>
-        <p className="mt-4 text-muted-foreground">{t("fun.subtitle")}</p>
+        
       </div>
 
       <div className="mt-12 grid items-center gap-10 md:grid-cols-2">
