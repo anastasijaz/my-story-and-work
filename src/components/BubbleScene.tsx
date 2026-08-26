@@ -145,25 +145,26 @@ export default function BubbleScene() {
       </Environment>
 
       {/* soft colour backdrop, visible through the bubbles */}
-      <group position={[0, 0, -14]}>
+      <group position={[0, 0, -16]}>
         {([
-          ["#ff9a6b", [-3.2, 1.6, 0], 3.4, 0.16],
-          ["#ff6f91", [2.8, -1.2, 0], 3.8, 0.14],
-          ["#b48cff", [0.4, 2.6, -1], 3, 0.12],
-          ["#7fd4ff", [-1.6, -2.6, -1], 3.2, 0.1],
-        ] as const).map(([color, pos, size, opacity], i) => (
-          <mesh key={i} position={pos as unknown as [number, number, number]}>
-            <circleGeometry args={[size, 48]} />
-            <meshBasicMaterial
+          ["#ff9a6b", [-4.4, 2.2, 0], 7],
+          ["#ff6f91", [3.6, -1.6, 0], 8],
+          ["#b48cff", [0.6, 3.4, -1], 6.5],
+          ["#7fd4ff", [-2.2, -3.4, -1], 7],
+        ] as const).map(([color, pos, size], i) => (
+          <sprite key={i} position={pos as unknown as [number, number, number]} scale={[size, size, 1]}>
+            <spriteMaterial
+              map={glowTexture}
               color={color}
               transparent
-              opacity={opacity}
+              opacity={0.42}
               blending={THREE.AdditiveBlending}
               depthWrite={false}
             />
-          </mesh>
+          </sprite>
         ))}
       </group>
+
 
       <CentralBubble />
 
