@@ -1,6 +1,6 @@
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { MeshTransmissionMaterial, OrbitControls, Environment } from "@react-three/drei";
+import { MeshTransmissionMaterial, OrbitControls } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
 
@@ -152,7 +152,6 @@ export default function BubbleScene() {
       <pointLight position={[0, 0, 0]} intensity={6} distance={9} color="#ff8a5c" />
       <pointLight position={[4, 4, 4]} intensity={18} color="#ff6f91" />
       <pointLight position={[-5, -2, -3]} intensity={12} color="#7fd4ff" />
-      <Environment preset="sunset" background={false} environmentIntensity={1.4} />
 
 
 
