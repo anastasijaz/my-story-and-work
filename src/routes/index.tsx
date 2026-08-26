@@ -77,6 +77,36 @@ const highlightKeys = [
   { k: "Energy", vKey: "highlights.energy.v", dKey: "highlights.energy.d" },
 ];
 
+const CAT = {
+  work: { key: "tl.cat.work", color: "--cat-work" },
+  venture: { key: "tl.cat.venture", color: "--cat-venture" },
+  hack: { key: "tl.cat.hack", color: "--cat-hack" },
+  cert: { key: "tl.cat.cert", color: "--cat-cert" },
+} as const;
+
+const timelineCategories = Object.values(CAT);
+
+type TimelineItem = {
+  id: string;
+  catKey: string;
+  color: string;
+  hasDesc: boolean;
+};
+
+const timeline: TimelineItem[] = [
+  { id: "tl.msc", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: false },
+  { id: "tl.horeich", catKey: CAT.work.key, color: CAT.work.color, hasDesc: true },
+  { id: "tl.hack25", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.marie", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.zollhof", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.hack24", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.sport", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
+  { id: "tl.fau", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: true },
+  { id: "tl.hack23", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
+  { id: "tl.siemens", catKey: CAT.work.key, color: CAT.work.color, hasDesc: true },
+  { id: "tl.bsc", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: false },
+];
+
 function Index() {
   const { t } = useLanguage();
   const [activeFilter, setActiveFilter] = useState<Filter>("All");
@@ -330,40 +360,57 @@ function Index() {
         </Link>
       </section>
 
-      {/* About me */}
+      {/* About me — timeline */}
       <section id="aboutme" className="border-y border-border/60 bg-gradient-soft">
         <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-          <div className="grid gap-12 md:grid-cols-5 md:items-center">
-            <div className="md:col-span-2">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-border bg-muted shadow-card">
-                <div className="flex h-full w-full items-center justify-center p-6 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  {t("aboutMe.picPlaceholder")}
-                </div>
-              </div>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {(["lang.German", "lang.English", "lang.Serbian"] as const).map((lang) => (
-                  <span
-                    key={lang}
-                    className="cursor-default rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground/80 shadow-card"
-                  >
-                    {t(lang)}
-                  </span>
-                ))}
-              </div>
-            </div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("aboutMe.kicker")}</p>
+          <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("aboutMe.title")}</h2>
 
-            <div className="md:col-span-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("aboutMe.kicker")}</p>
-              <h2 className="font-display mt-3 text-3xl md:text-4xl">{t("aboutMe.title")}</h2>
-              <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                <p>{t("aboutMe.p1")}</p>
-                <p>{t("aboutMe.p2")}</p>
-                <p>{t("aboutMe.p3")}</p>
-              </div>
-            </div>
+          <div className="mt-8 flex flex-wrap gap-2">
+            {timelineCategories.map((c) => (
+              <span
+                key={c.key}
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground/80 shadow-card"
+              >
+                <span className="h-2 w-2 rounded-full" style={{ background: `var(${c.color})` }} />
+                {t(c.key)}
+              </span>
+            ))}
           </div>
+
+          <ol className="relative mt-12 border-l border-border pl-8 md:pl-12">
+            {timeline.map((item) => (
+              <li key={item.id} className="relative pb-10 last:pb-0">
+                <span
+                  className="absolute -left-[2.28rem] top-1.5 h-3.5 w-3.5 rounded-full ring-4 ring-background md:-left-[3.28rem]"
+                  style={{ background: `var(${item.color})` }}
+                />
+                <div className="rounded-3xl border border-border bg-card p-6 shadow-card transition hover:-translate-y-0.5 hover:shadow-soft">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <span
+                      className="rounded-full px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-wider text-primary-foreground"
+                      style={{ background: `var(${item.color})` }}
+                    >
+                      {t(item.catKey)}
+                    </span>
+                    <span className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
+                      {t(`${item.id}.date`)}
+                    </span>
+                  </div>
+                  <h3 className="font-display mt-3 text-xl md:text-2xl">{t(`${item.id}.title`)}</h3>
+                  <p className="mt-1 text-sm font-medium text-foreground/70">{t(`${item.id}.org`)}</p>
+                  {item.hasDesc && (
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
+                      {t(`${item.id}.desc`)}
+                    </p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </section>
+
 
 
       <section id="contact" className="mx-auto max-w-6xl px-6 py-24 md:py-32">
