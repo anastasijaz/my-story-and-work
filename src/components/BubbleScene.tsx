@@ -1,6 +1,6 @@
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { MeshTransmissionMaterial, OrbitControls } from "@react-three/drei";
+import { MeshTransmissionMaterial, OrbitControls, Environment, Lightformer } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import * as THREE from "three";
 
@@ -155,26 +155,12 @@ export default function BubbleScene() {
 
 
 
-      {/* soft colour backdrop, visible through the bubbles */}
-      <group position={[0, 0, -16]}>
-        {([
-          ["#ff9a6b", [-4.4, 2.2, 0], 7],
-          ["#ff6f91", [3.6, -1.6, 0], 8],
-          ["#b48cff", [0.6, 3.4, -1], 6.5],
-          ["#7fd4ff", [-2.2, -3.4, -1], 7],
-        ] as const).map(([color, pos, size], i) => (
-          <sprite key={i} position={pos as unknown as [number, number, number]} scale={[size, size, 1]}>
-            <spriteMaterial
-              map={glowTexture}
-              color={color}
-              transparent
-              opacity={0.42}
-              blending={THREE.AdditiveBlending}
-              depthWrite={false}
-            />
-          </sprite>
-        ))}
-      </group>
+      <Environment resolution={64} environmentIntensity={2.6} frames={1}>
+        <Lightformer form="circle" intensity={5} color="#ff9a6b" position={[6, 4, -6]} scale={2.2} target={[0, 0, 0]} />
+        <Lightformer form="circle" intensity={4.2} color="#ff6f91" position={[-6, -2, -6]} scale={2.4} target={[0, 0, 0]} />
+        <Lightformer form="circle" intensity={3.4} color="#7fd4ff" position={[0, -6, -7]} scale={2.6} target={[0, 0, 0]} />
+        <Lightformer form="ring" intensity={3} color="#b48cff" position={[0, 6, -7]} scale={2} target={[0, 0, 0]} />
+      </Environment>
 
       <CentralBubble />
 
