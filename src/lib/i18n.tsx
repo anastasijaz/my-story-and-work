@@ -218,6 +218,61 @@ const translations: Record<Lang, Dict> = {
     "lang.German": "Deutsch",
     "lang.English": "Englisch",
 
+    "tl.cat.work": "Berufserfahrung",
+    "tl.cat.venture": "Entrepreneurship",
+    "tl.cat.hack": "Hackathons",
+    "tl.cat.cert": "Zertifikate & Ausbildung",
+    "tl.msc.title": "M.Sc. Wirtschaftsingenieurwesen (Energietechnik)",
+    "tl.msc.org": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "tl.msc.date": "Apr. 2026 – heute",
+    "tl.horeich.title": "Werkstudentin Produktmanagement",
+    "tl.horeich.org": "Horeich — Hardware-Startup für Umwelt- und Infrastrukturmonitoring",
+    "tl.horeich.date": "Mai 2025 – Nov. 2025",
+    "tl.horeich.desc":
+      "Redesign und Optimierung der Unternehmenswebsite in WordPress (Struktur, SEO, modernes Design), Erstellung von Benutzerhandbüchern und technischer Dokumentation für Sensorprodukte sowie Unterstützung im Go-to-Market über LinkedIn-Marketing und Newsletter.",
+    "tl.hack25.title": "HackBay 2025 · Slush 2025 Volunteer",
+    "tl.hack25.org": "Nürnberg · Helsinki",
+    "tl.hack25.date": "2025",
+    "tl.hack25.desc":
+      "Erneut HackBay — dazu Volunteering im Limited-Partners-Team bei Slush 2025 in Helsinki.",
+    "tl.marie.title": "Co-Founderin — Menopause-App „MARIE“",
+    "tl.marie.org": "Healthcare Hackathon Bayern · Challenge Bionorica",
+    "tl.marie.date": "2024 – heute",
+    "tl.marie.desc":
+      "User-Interviews und Bedarfsanalyse, UI/UX-Design in Figma, Pitch-Präsentationen — und Weiterentwicklung der App sowie strategischer Partnerschaften nach dem Hackathon.",
+    "tl.zollhof.title": "Zollhof Tech Incubator — Talent Programm",
+    "tl.zollhof.org": "Challenge-Partner: Nürnberger Versicherung",
+    "tl.zollhof.date": "Okt. 2024 – Dez. 2024",
+    "tl.zollhof.desc":
+      "Figma-Prototyp und Businessplan für eine App, die Menschen durch die Nachlassplanung führt — Dokumente, Bestattungswünsche und Erbe. Wird derzeit vom Partnerunternehmen umgesetzt.",
+    "tl.hack24.title": "Junction Helsinki · Healthcare Hackathon Bayern · HackBay",
+    "tl.hack24.org": "Helsinki · Bayern · Nürnberg",
+    "tl.hack24.date": "2024",
+    "tl.hack24.desc":
+      "Drei Hackathons in einem Jahr — Prototypen bauen im Zusammenspiel von Design, Tech und Business unter Zeitdruck.",
+    "tl.sport.title": "CMO — SportBuddy",
+    "tl.sport.org": "Startup · interaktive App für Sportbegeisterte",
+    "tl.sport.date": "2023 – 2024",
+    "tl.sport.desc":
+      "Aufbau und Betreuung der Social-Media-Präsenz (Instagram, LinkedIn), User-Acquisition und Community-Building sowie Organisation eines Hochschulsportkurses zur Steigerung der Markenbekanntheit.",
+    "tl.fau.title": "FAU Digital Tech Academy Fellow + Existency Building Box",
+    "tl.fau.org": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "tl.fau.date": "2023",
+    "tl.fau.desc":
+      "Unternehmerische Grundlagen — Businessplan, Prototyping und Design Thinking — angewendet im Team, um eine Startup-Idee über Marktrecherche und Nutzerfeedback zu validieren.",
+    "tl.hack23.title": "HackBay 2023 — Finalistin",
+    "tl.hack23.org": "Nürnberg",
+    "tl.hack23.date": "2023",
+    "tl.hack23.desc": "Erster Hackathon, direkt ins Finale.",
+    "tl.siemens.title": "Werkstudentin Projektmanagement",
+    "tl.siemens.org": "Siemens Healthineers — IT Customer Services & Enterprise Service EMEA",
+    "tl.siemens.date": "Feb. 2020 – Mai 2023",
+    "tl.siemens.desc":
+      "Entwicklung und Einführung von SharePoint-Seiten zur Prozessoptimierung, Erstellung visueller Projektmanagement-Tools (Gantt-Diagramme, PowerPoint, Visio) und Benutzerhandbücher für Webservices zum Onboarding.",
+    "tl.bsc.title": "B.Sc. Elektrotechnik (allgemein)",
+    "tl.bsc.org": "Friedrich-Alexander-Universität Erlangen-Nürnberg",
+    "tl.bsc.date": "März 2020 – 2026",
+
 
     "contact.title": "Lass uns gemeinsam etwas Nützliches bauen.",
     "contact.subtitle":
