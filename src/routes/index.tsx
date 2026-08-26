@@ -94,7 +94,7 @@ type TimelineItem = {
 };
 
 const timeline: TimelineItem[] = [
-  { id: "tl.msc", ...CAT.cert, catKey: CAT.cert.key, hasDesc: false },
+  { id: "tl.msc", catKey: CAT.cert.key, color: CAT.cert.color, hasDesc: false },
   { id: "tl.horeich", catKey: CAT.work.key, color: CAT.work.color, hasDesc: true },
   { id: "tl.hack25", catKey: CAT.hack.key, color: CAT.hack.color, hasDesc: true },
   { id: "tl.marie", catKey: CAT.venture.key, color: CAT.venture.color, hasDesc: true },
