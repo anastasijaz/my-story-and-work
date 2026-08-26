@@ -112,7 +112,7 @@ const translations: Record<Lang, Dict> = {
     "about.p1":
       "Mein akademisches Zuhause ist die Elektrotechnik — die Disziplin, Systeme, Menschen und Ressourcen optimal zusammenwirken zu lassen. Meine Spezialisierung in Energietechnik erlaubt mir, diesen Blick auf die wichtigste Transformation unserer Generation zu richten.",
     "about.p2":
-      "Außerhalb des Hörsaals baue ich Produkte: Dating-Apps, Healthtech, Versicherungs-Challenges und  interne Tools. Ich liebe es, ein unscharfes Briefing vom Hackathon-Start am Wochenende in etwas zu verwandeln, das Nutzer:innen tatsächlich öffnen können. Besonders wichtig ist mir, die Nutzer:innen in den Mittelpunkt zu stellen.",
+      "Außerhalb des Hörsaals baue ich Produkte: Dating-Apps, Healthtech, Versicherungs-Challenges und  interne Tools. Ich liebe es, ein unscharfes Briefing vom Hackathon-Start am Wochenende in etwas zu verwandeln, das Nutzer:innen tatsächlich öffnen können. Besonders wichtig ist mir, die Nutzer:innen in den Mittelpunkt zu stellen. Mein Ziel ist ein Produkt zu entwickeln dass die Nutzer lieben werden.",
 
     "highlights.kicker": "Lebenslauf-Highlights",
     "highlights.title": "Ausgewählte Erfahrungen.",
