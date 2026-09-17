@@ -20,7 +20,7 @@ const translations: Record<Lang, Dict> = {
     "hero.title.l2c": " of energy,",
     "hero.title.l3": "people and products.",
     "hero.subtitle":
-      "I'm an industrial engineering student specialising in energy systems with a bachelors in electrical engineering. Between coursework, I build products at hackathons, with startups and for incubator challenges — turning messy problems into shipped software.",
+      "I'm an industrial engineering student specialising in energy systems with a bachelors in electrical engineering. Between coursework, I love tackling complex problems at hackathons, with startups and for incubator challenges — turning messy problems into shipped products.",
     "hero.download": "Download resume",
     "hero.seeWork": "See selected work →",
 
