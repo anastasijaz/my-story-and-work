@@ -1,8 +1,5 @@
-import { Suspense, lazy, useState } from "react";
-import { ClientOnly } from "@tanstack/react-router";
+import { useState } from "react";
 import { useLanguage } from "@/lib/i18n";
-
-const BubbleScene = lazy(() => import("./BubbleScene"));
 
 const facts = [
   { id: "f1", factKey: "fun.f1", labelKey: "fun.f1.label" },
@@ -16,13 +13,8 @@ export function FunFacts() {
 
   return (
     <section id="funfacts" className="relative isolate min-h-screen w-full overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[#0b0713]">
-        <ClientOnly fallback={null}>
-          <Suspense fallback={null}>
-            <BubbleScene />
-          </Suspense>
-        </ClientOnly>
-      </div>
+      <div className="absolute inset-0 -z-10 bg-[#0b0713]" />
+
 
       <div className="pointer-events-none relative mx-auto flex min-h-screen max-w-6xl flex-col justify-between px-6 py-20 md:py-28">
         <div className="max-w-xl">
